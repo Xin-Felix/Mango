@@ -1,0 +1,13 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height*2+20}}px'>
+  <view class="tips">
+    <text selectable="{{true}}">免责声明：平台发布的所有信息仅负责展示，与平台本身无关，平台不负任何责任。</text>
+  </view>
+  <view class="yveding">
+    <checkbox bindtap="look_agreement">同意</checkbox>
+    <navigator url="/pages/agreement/agreement">《平台约定》</navigator>
+  </view>
+  <view class="submit">
+    <button type="primary" bindtap="to_add">去发布</button>
+  </view>
+</view>

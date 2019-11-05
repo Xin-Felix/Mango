@@ -1,0 +1,92 @@
+/* 顶部要固定定位   标题要居中   自定义按钮和标题要和右边微信原生的胶囊上下对齐 */
+
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.eot?t=1565321795659'); /* IE9 */
+  src: url('iconfont.eot?t=1565321795659#iefix') format('embedded-opentype'),
+         /* IE6-IE8 */ url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOoAAsAAAAAB8QAAANZAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDBIJjATYCJAMQCwoABCAFhG0HQRvOBhHVm6PIfibwJparAE7mrwlnEZEQ6akJQsxlI8vZukmPEOkHTL9LAGyuOWCjoiaf5Cx69IW0fcxfmo4ScPT34Jjp0iaQBzSXrKRIwNF0OrCo+G+gB/0Xxh/GrlqKgzoNAXxSkxOpWLlmQxwWPEkA6dmtSztcRoFtSBccQqRipUXm4uHMNHMTmBP8vXwivzgweAo+q27nSh0p+zbV20E6NkRLHcfY6XSAug4UyAlYkK6VhvZoFMiJ4tv9LYUBh8PAVF0Z3g4KQ8Q6isCRf3mgGAQkAk6NAaAgCiq8TcUYiTADlGGgcBBkPUCRBcDxREkDgA0Yl5IbBYOJn9FljNely5Jx26cn7LhwbKJEnRbN2DEu8YDbAHEXcQ9xh9Bo2YwUd7UNb9+m1Mw9d+40uXevyfLpTTtt2pG88+atw/zpp5Orb5ae9COELNq4ffWaJF12zMjWadGqlVszVvbtHMw4hQk06Nwx8LPGnak6okfPr9nIz/0/e/a3bN8qTJ78JeuTrE/5dZ8mjRYsb7bHW9Ky9jJvT+s5y+pucfOa1J5HwyK5skiT6sum99yetlHC+onG9k1XO3296F3Za5Xt8771yFQj0i+6oqOz5uqYK1280uFP/rnfKDh27P4Ulfxi+4r4lVLsTt4oxd6seX+/HnTryKx0BdLtnfmk06vfRc6DydOfOHiw5p5ie3/1++ccntXjz4EiyT36AhBuLmq5gJB+0OYh+k/H/bVRXGgxolibOCX/uOCqOx4MCCogW8jSTcirZ3Zm/iNmxwbrsLHSWovDGK7JUmjwBAP4+MCfiUB8nk5hSgSJTnAaE4IhilSgODIiLTYneAQUhAiOMuCTgyrrAxLQH0VsNJCdSQCEuOwBQ2zOgBKXW0iLfQIeifkCEeKKgk9jSbBjQLOXendkVIIW9A9qQ4OjatmF6Tf0qVOcZgf4F3Ks3VBmRT58xQF5ijnx7SsRB46phws4D7uOYGRq0EgWRMZDnruqb8oM9ZMdR0YlaAH9A2pDgxPtZVf4/Rv61CluKGlTvpBj3TtQklF0QF4FQ6eSW3lNfPsKEQc4ph64AB12JEDAWD2sQSMZYYBvPJCjVq6rIFte1L9AuloBvsGKERUrHqvOagipXkVKMdHyn9h/OJkAAAAA') format('woff2'),
+         url('iconfont.woff?t=1565321795659') format('woff'),
+         url('iconfont.ttf?t=1565321795659') format('truetype'),
+         /* chrome,
+         firefox,
+         opera,
+         Safari,
+         Android,
+         iOS 4.2+ */ url('iconfont.svg?t=1565321795659#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fanhui:before {
+  content: "\e675";
+}
+
+.icon-sousuo:before {
+  content: "\e623";
+}
+
+.icon-zhuye:before {
+  content: "\e61d";
+}
+
+.nav-wrap {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  color: #000;
+  z-index: 9999999;
+}
+
+/* 标题要居中 */
+
+.nav-title {
+  position: absolute;
+  text-align: center;
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 18px;
+  color: #2c2b2b;
+  font-weight: 600;
+}
+
+.nav-capsule {
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  width: 140rpx;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.navbar-v-line {
+  width: 1px;
+  height: 32rpx;
+  background-color: #e5e5e5;
+}
+
+.back-pre, .back-home {
+  width: 32rpx;
+  height: 36rpx;
+  margin-top: 4rpx;
+  padding: 10rpx;
+}
+
+.nav-capsule .back-home {
+  width: 36rpx;
+  height: 40rpx;
+  margin-top: 3rpx;
+}

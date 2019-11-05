@@ -1,0 +1,33 @@
+<view class="htmleaf-container" style="background:white;display:{{isLoading?'none':'block'}};height:100%;">
+
+  <view class="spinner-box" style="margin:0 auto;">
+    <view class="pulse-container" style="margin-top:500rpx;">
+      <view class="pulse-bubble pulse-bubble-1"></view>
+      <view class="pulse-bubble pulse-bubble-2"></view>
+      <view class="pulse-bubble pulse-bubble-3"></view>
+    </view>
+  </view>
+
+</view>
+
+<view style="display:{{isLoading?'block':'none'}}">
+
+
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <view class='container' style='margin-top: {{height*2+20}}px'>
+    <view class="main">
+      <view class="avatar">
+        <image src="../../images/other/logo.png" mode="widthFix" />
+      </view>
+      <view class="intro">
+        <view>大家好！我叫 Xin-Felix(以下简称我),这是我经一月时间开发出的 芒果 New Life(以下简称小程序),首先非常感谢大家能够使用我写的小程序。</view>
+        <view>由于时间的问题,小程序并没有太多优秀的功能，但是我将大家平时使用的很多服务收集到当前的小程序,希望大家可以更方便的获取到最新咨询以及更好的商家服务。</view>
+        <view>
+          如果后期使用人数理想,我将继续开发下去,如果在使用过程中遇到任何问题,或者对小程序有任何建议,请在第一时间联系我,我的手机号
+          <text selectable="{{true}}" style="color:#3cc" bindtap="call">18996379281</text>
+        </view>
+        <view>如果你不嫌弃我们,我们团队所有成员欢迎你的到来,你的到来将减少更多的开发时间,让我们更好的发展下去</view>
+      </view>
+    </view>
+  </view>
+</view>

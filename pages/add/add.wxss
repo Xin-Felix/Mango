@@ -1,0 +1,27 @@
+/* pages/add/add.wxss */
+
+.container {
+  background-color: white;
+}
+
+.tips {
+  background-color: wheat;
+  padding: 20rpx;
+  margin: 60rpx;
+  color: #999;
+  font-size: 25rpx;
+}
+
+.yveding {
+  text-align: center;
+  font-size: 30rpx;
+}
+
+navigator {
+  display: inline-block;
+  color: blue;
+}
+
+.submit {
+  margin: 20rpx;
+}

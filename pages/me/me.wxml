@@ -1,0 +1,107 @@
+<view class="htmleaf-container" style="background:white;display:{{isLoading?'none':'block'}};height:100%;">
+
+  <view class="spinner-box" style="margin:0 auto;">
+    <view class="pulse-container" style="margin-top:500rpx;">
+      <view class="pulse-bubble pulse-bubble-1"></view>
+      <view class="pulse-bubble pulse-bubble-2"></view>
+      <view class="pulse-bubble pulse-bubble-3"></view>
+    </view>
+  </view>
+
+</view>
+
+
+<view style="display:{{isLoading?'block':'none'}}">
+
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <view class='container' style='margin-top: {{height*2+20}}px'>
+    <view class="top">
+      <view class="user_message">
+        <view class="user_image">
+          <image src="{{userInfo.avatarUrl==null?'../../images/other/logo.png':userInfo.avatarUrl}}" mode="widthFix" />
+        </view>
+        <view class="user_detail">
+          <view class="user_nickname">
+            <text>{{userInfo.nickName==null?"登陆后查看":userInfo.nickName}}</text>
+          </view>
+          <view class="user_time">
+            <text style="display:{{userInfo.province==null?'none':''}}">来自{{userInfo.province!=""?userInfo.province+"省":"火星"}}{{userInfo.city!=""?userInfo.city+"市":""}}的{{userInfo.gender==1?"帅气小伙":"漂亮小姐姐"}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <official-account></official-account>
+    <view class="me_operation">
+      <navigator url="/pages/me_fabu/me_fabu">
+        <view>
+          <text class="iconfont icon-wodefabu"></text>
+          <text style="margin-left:10rpx;">我的发布</text>
+        </view>
+      </navigator>
+      <navigator url="/pages/me_canyu/me_canyu">
+        <view>
+          <text class="iconfont icon-wocanyude"></text>
+          <text style="margin-left:10rpx;">我的参与</text>
+        </view>
+      </navigator>
+      <navigator url="/pages/me_xiaoxi/me_xiaoxi">
+        <view>
+          <text class="iconfont icon-xiaoxi"></text>
+          <text style="margin-left:10rpx;">我的消息</text>
+        </view>
+      </navigator>
+      <navigator url="/pages/me_shoucang/me_shoucang">
+        <view>
+          <text class="iconfont icon-shoucang"></text>
+          <text style="margin-left:10rpx;">我的收藏</text>
+        </view>
+      </navigator>
+    </view>
+    <view class="me_operation">
+      <view bindtap="attention">
+        <text class="iconfont icon-follow"></text>
+        <text style="margin-left:10rpx;">关注我们</text>
+      </view>
+      <view>
+        <text class="iconfont icon-kefu"></text>
+        <button open-type="contact">我的客服</button>
+      </view>
+    </view>
+    <view class="me_operation">
+      <navigator url="/pages/agreement/agreement">
+        <view>
+          <text class="iconfont icon-yueding"></text>
+          <text style="margin-left:10rpx;">平台约定</text>
+        </view>
+      </navigator>
+      <navigator url="/pages/me_about/me_about">
+        <view>
+          <text class="iconfont icon-about"></text>
+          <text style="margin-left:10rpx;">关于程序</text>
+        </view>
+      </navigator>
+      <view bindtap="call">
+        <text class="iconfont icon-lianxi"></text>
+        <text style="margin-left:10rpx;">联系我们</text>
+      </view>
+    </view>
+  </view>
+  <view class="me_operation">
+    <view bindtap="checkAdmin">
+      <text class="iconfont icon-follow"></text>
+      <text style="margin-left:10rpx;">权限检测</text>
+    </view>
+  </view>
+  <view style="text-align:center;color:#999;padding:20rpx;font-size:28rpx;">Ver 2.0.7</view>
+
+  <view class="zan-dialog {{ showDialog1 ? 'zan-dialog--show' : '' }}">
+    <view class="zan-dialog__mask" />
+    <view class="zan-dialog__container">
+      <view style="padding:20rpx">
+        <view class="tips">请在登陆后查看噢~</view>
+        <view class="tips">登录将获取你的头像,用户名等信息</view>
+        <button type="primary" class="submit" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="doLogin">点击登录</button>
+      </view>
+    </view>
+  </view>
+</view>

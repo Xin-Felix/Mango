@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "iconfont";
+    src: url('iconfont.eot?t=1565503082362');
+    /* IE9 */
+    src: url('iconfont.eot?t=1565503082362#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKcAAsAAAAABlgAAAJRAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcApkdAE2AiQDCAsGAAQgBYRtBy0blwXInpo8qVDb+BjCsEElBJCECOLX2M++20PcI1E0iyaaJUIhRBK0SqJkQrH/S7j7n9PrCH3Vl8MSqRGpkkxSuB/gn0vBjUgJoOdRqAm5Crdits/K53oDLqc/gR6kdUC5zTF4TMDA0kD3wCiyIom8YewCl/CYQIcZKyInO0dVmJCsVYF41tUGTOSiUrJCm9BSczDFu1pbeS2At/D78V8qJijqitVy/rTdhrXvqF1SHTfH7nxCjICO16iwBSRxXZs9NSwYN6wjO2IB7Ksx+I42jW8Xe7UI9tdZ9V1gCkrvSebKb7W+gIynJ4HFUZdRerpfHm6XOk8nP3eL4ePxgkTZ0u+T5e7z3Rebm/dmHorVy4vt0lMpcG3DhZVqFz+KNfhjtdJzcQfWAJpBdV8KBB92uvL8zm2dCb7CDBpuBgn9/LTtzRf8FVnPodQVlq2kKqv1F5OjVhZ06EADODhgMNY4fAvF0Gb4RvytplNU2iyRyW6h1mkbLdrso8Om3eOdBgnDItux4QIg9HlH0eMTlT6/ZLJ/qI34R4u+GEaH2xi8sNNK6FPHAhuEbdbsM73lOtxx0FTUWEY1tBoiqwh5dRSBnmDJWKJY2EUHxRxbgo6aIuKMC9dmO+A5tCyXecI1sEUxjcgrxeO87k2xlmvDlGMCaiCojWnqY3QtLgf3J5Op0ufLkCpkaRAtbTXxOiQE9NmZpJhED3JX6/Rqu5dXAh2qFEI4hhNcNmYHzEMWi4vx6ucZUAuJ0UakPSVxexzvq42tr7c/oIR1YXlKlIfM3GsNAAA=') format('woff2'), url('iconfont.woff?t=1565503082362') format('woff'), url('iconfont.ttf?t=1565503082362') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('iconfont.svg?t=1565503082362#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 32rpx;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cha:before {
+    content: "\e61a";
+    color: red;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx;
+}
+
+.top_title {
+    font-size: 30rpx;
+}
+
+.intro {
+    font-size: 27rpx;
+    color: #999;
+}
+
+.image_content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20rpx;
+    justify-content: space-around;
+}
+
+.moment_img {
+    width: 230rpx;
+    height: 230rpx;
+}
+
+.image {
+    position: relative;
+}
+
+.cha {
+    position: absolute;
+    top: 0;
+}
+
+.bottom,
+.bottom_item {
+    margin-top: 20rpx;
+    background-color: white;
+    padding: 20rpx;
+}
+
+.message_user,
+.message_category {
+    display: flex;
+    flex-direction: row;
+}
+
+.phone_title {
+    font-size: 30rpx;
+    width: 300rpx;
+}
+
+.phone {
+    font-size: 27rpx;
+    color: #999
+}
+
+.message_category {
+    margin-top: 2rpx;
+}
+
+.bottom_item {
+    margin-top: 4rpx;
+}
+
+.wx-switch-input {
+    width: 80rpx !important;
+    height: 36rpx !important;
+    background: #50D2C2 !important;
+    border: #50d2c2 !important;
+    /* 2018-07-18 重置开关边框颜色 */
+}
+
+
+/*白色样式（false的样式）*/
+
+.wx-switch-input::before {
+    width: 80rpx !important;
+    height: 36rpx !important;
+}
+
+.wx-switch-input::after {
+    width: 40rpx !important;
+    height: 36rpx !important;
+}
+
+.tips {
+    padding: 20rpx;
+    color: red;
+    font-size: 20rpx;
+    height: 200rpx;
+}
+
+.submit {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.main {
+    text-align: center;
+    font-size: 40rpx;
+    padding: 20rpx;
+    font-weight: 1000;
+    color: white;
+    background-color: #50D2C2;
+}

@@ -1,0 +1,60 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='container' style='margin-top: {{height*2+20}}px'>
+  <view class="top_title">内容描述</view>
+  <view class="intro">
+    <textarea style="width:100%;margin-top:20rpx;" maxlength="10000" bindinput='input_intro' placeholder="请输入内容描述（最多10000字）"></textarea>
+  </view>
+  <view class="image_content">
+    <view class='image' wx:for="{{img_url}}" wx:key="{{index}}">
+      <image class="moment_img" src="{{item}}" mode="aspectFill"></image>
+      <view class="iconfont icon-cha cha" id="{{item}}" bindtap="deleteImg"></view>
+    </view>
+    <view class='image' style='display:{{hideAdd?"none":"block"}}'>
+      <image bindtap="chooseimage" class="moment_img" src='../../images/other/add.png'></image>
+    </view>
+  </view>
+</view>
+<view class="bottom">
+  <view class="message_user">
+    <view class="phone_title">联系方式：</view>
+    <input class="phone" type="number" bindinput='input_phone' placeholder="请输入您的手机号" maxlength="11"></input>
+  </view>
+</view>
+<view class="bottom_item">
+  <view class="message_user">
+    <view class="phone_title">当前年级：</view>
+    <input class="phone" type="number" bindinput='input_level' placeholder="请输您的年级 (18)" maxlength="2"></input>
+  </view>
+</view>
+<view class="bottom_item">
+  <view class="message_user">
+    <view class="phone_title">专业说明：</view>
+    <input class="phone" placeholder="请输入您的专业" bindinput='input_major' maxlength="13"></input>
+  </view>
+</view>
+<view class="bottom_item">
+  <view class="message_category">
+    <view class="phone_title">请选择分类：</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="phone">
+        {{(array[category_index]==null)?"请选择分类":"当前选择-"}}{{array[category_index]}}
+      </view>
+    </picker>
+  </view>
+</view>
+<view class="bottom">
+  <view class="message_user">
+    <view class="phone_title">是否匿名：</view>
+    <switch bindchange="switch1Change" />
+  </view>
+</view>
+<view class="tips">
+  <view>· 联系方式将用于管理员核实信息,请熟知</view>
+  <view>· 以上信息仅用于向他人展示,请根据实际情况填写</view>
+  <view>· 联系方式不会显示在详情界面,如需告知他人请在描述中说明</view>
+</view>
+<view class="submit">
+  <view bindtap="submit" class="main">
+    <text>确定发布</text>
+  </view>
+</view>

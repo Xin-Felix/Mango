@@ -5,7 +5,7 @@ App({
     share: false, // 分享默认为false
     height: 0,
     // url: "http://127.0.0.1:8080",
-    url: "https://mango.huangxin.work",
+    url: "这里是你的后台域名，为了安全起见，后台地址不暴露了",
     userId: -1,
     userInfo: {},
     userIsAdmin: -1,

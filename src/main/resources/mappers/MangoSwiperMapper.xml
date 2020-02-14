@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.huangxin.mango.mapper.MangoSwiperMapper">
+  <resultMap id="BaseResultMap" type="work.huangxin.mango.model.MangoSwiper">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="swiper_id" jdbcType="INTEGER" property="swiperId" />
+    <result column="swiper_image_url" jdbcType="VARCHAR" property="swiperImageUrl" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    swiper_id, swiper_image_url
+  </sql>
+</mapper>

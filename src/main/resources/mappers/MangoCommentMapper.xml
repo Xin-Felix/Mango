@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.huangxin.mango.mapper.MangoCommentMapper">
+  <resultMap id="BaseResultMap" type="work.huangxin.mango.model.MangoComment">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="comment_id" jdbcType="INTEGER" property="commentId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="message_id" jdbcType="INTEGER" property="messageId" />
+    <result column="comment_detail" jdbcType="VARCHAR" property="commentDetail" />
+    <result column="comment_creat_time" jdbcType="TIMESTAMP" property="commentCreatTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    comment_id, user_id, message_id, comment_detail, comment_creat_time
+  </sql>
+</mapper>

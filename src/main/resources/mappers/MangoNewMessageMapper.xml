@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.huangxin.mango.mapper.MangoNewMessageMapper">
+    <resultMap id="BaseResultMap" type="work.huangxin.mango.model.MangoNewMessage">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="new_message_id" jdbcType="INTEGER" property="newMessageId"/>
+        <result column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="new_message_type" jdbcType="INTEGER" property="newMessageType"/>
+        <result column="message_id" jdbcType="INTEGER" property="messageId"/>
+        <result column="new_message_detail" jdbcType="VARCHAR" property="newMessageDetail"/>
+        <result column="new_message_time" jdbcType="TIMESTAMP" property="newMessageTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        new_message_id, user_id, new_message_type, message_id, new_message_detail,new_message_time
+    </sql>
+    <select id="getAllNewMessage" resultMap="BaseResultMap">
+
+
+    SELECT new_message_id, user_id, new_message_type, message_id, new_message_detail,new_message_time FROM mango_new_message WHERE user_id=#{id} ORDER by new_message_id desc
+  </select>
+    <select id="getLastNewMessage" resultMap="BaseResultMap">
+
+       SELECT new_message_id, user_id, new_message_type, message_id, new_message_detail,new_message_time FROM mango_new_message WHERE user_id=#{id} ORDER by new_message_id desc limit 1
+    </select>
+
+
+</mapper>

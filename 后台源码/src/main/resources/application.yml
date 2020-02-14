@@ -5,9 +5,9 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://39.104.74.26:3306/mango_new_life?useUnicode=true&useSSL=true
-    username: mango_new_life
-    password: 1538933906
+    url: jdbc:mysql://localhost:3306/数据库名称?useUnicode=true&useSSL=true
+    username: 数据库名称
+    password: 数据库密码
 
 mybatis:
   type-aliases-package: work.huangxin.mango.model

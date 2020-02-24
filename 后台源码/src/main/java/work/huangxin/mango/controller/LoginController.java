@@ -34,8 +34,8 @@ public class LoginController {
 
         String url = "https://api.weixin.qq.com/sns/jscode2session";
         Map<String, String> param = new HashMap<String, String>();
-        param.put("appid", "wxe0bc4659bcdffd95");
-        param.put("secret", "1b6070bb804169cb548311013d0db633");
+        param.put("appid", "微信小程序后台查看");
+        param.put("secret", "微信小程序后台查看");
         param.put("js_code", code);
         param.put("grant_type", "authorization_code");
 

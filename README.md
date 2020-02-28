@@ -2,6 +2,9 @@
 ### 微信小程序|校园|表白墙|失物招领|二手交易|论坛|兼职|拼车|活动等
 
 ## 微信搜索(芒果New Life)即可查看效果
+![项目地址](https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/65bbcd21b2ef621e566d394b21657d53fc39fe8a7ee0ca872eaebe74f3694de9f34954c4e1f92a5b926c0cda4b9304bc?pictype=scale&from=30013&version=3.3.3.3&uin=1538933906&fname=gh_ad262db22c54_1280.jpg&size=750 "项目查看")
+
+不折腾了,没有上传在码云,Github直达-->[点击跳转项目源码](https://github.com/Xin-Felix/Mango)
 
 # 2020-2-14后台源码公开
 
@@ -64,7 +67,7 @@
 
 # 如果你觉得程序帮到了你,可以请我喝杯coffee,谢谢
 
-![weixin](https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/9e834b5c9f51cbd72f981c4e7cc26cf1c2eb3debbe923946b71df0e452ca58a00eef55aa93cd8819c4a84709fb1397a5?pictype=scale&from=30013&version=3.3.3.3&uin=1538933906&fname=121971d9fd5252b7888353d8483e99c.jpg&size=750 "markdown")
+![weixin](https://images.gitee.com/uploads/images/2020/0228/192541_a630d5a7_4760255.jpeg "markdown")
 
 
 

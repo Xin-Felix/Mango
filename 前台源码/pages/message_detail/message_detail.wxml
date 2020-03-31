@@ -39,7 +39,11 @@
         </view>
         <view class="main_middle_image">
           <block wx:for="{{messageDetail.messageImages}}" wx:key="{{index}}">
+<<<<<<< HEAD
             <image bindtap="look_image" id="https://1538933906.oss-cn-huhehaote.aliyuncs.com/{{item.imageUrl}}?x-oss-process=style/copyright" src="https://1538933906.oss-cn-huhehaote.aliyuncs.com/{{item.imageUrl}}?x-oss-process=style/look_message" mode="widthFix" />
+=======
+            <image bindtap="look_image"  id="{{imageUrl}}{{item.imageUrl}}" src="{{imageUrl}}{{item.imageUrl}}" mode="widthFix" />
+>>>>>>> 更新
           </block>
         </view>
       </view>

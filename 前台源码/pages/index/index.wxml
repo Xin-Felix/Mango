@@ -184,7 +184,11 @@
             </view>
             <view class="main_middle_image {{item.messageImages.length==1?'change_one':item.messageImages.length==2?'change_second':''}}">
               <block wx:for="{{item.messageImages}}" wx:key="{{index}}">
+<<<<<<< HEAD
                 <image src="https://1538933906.oss-cn-huhehaote.aliyuncs.com/{{item.imageUrl}}?x-oss-process=style/message" mode="aspectFill" />
+=======
+                <image src="{{imageUrl}}{{item.imageUrl}}" mode="aspectFill" />
+>>>>>>> 更新
               </block>
             </view>
           </view>

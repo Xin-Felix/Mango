@@ -4,8 +4,14 @@ App({
   globalData: {
     share: false, // 分享默认为false
     height: 0,
+<<<<<<< HEAD
     // url: "http://127.0.0.1:8080",
     url: "这里是你的后台域名，为了安全起见，后台地址不暴露了",
+=======
+       // url: "http://127.0.0.1:8080",
+    url: "这里是你的后台域名，为了安全起见，后台地址不暴露了,地址不带后面的斜杠",
+    imageUrl: "https://*.oss-cn-huhehaote.aliyuncs.com/",//这是你的oss地址,用来展示页面中的图片
+>>>>>>> 更新
     userId: -1,
     userInfo: {},
     userIsAdmin: -1,
@@ -17,7 +23,11 @@ App({
     isUpdate: -1,
 
   },
+<<<<<<< HEAD
   onLaunch: function(options) {
+=======
+  onLaunch: function (options) {
+>>>>>>> 更新
 
     wx.showLoading({
       title: '努力加载中~',
@@ -41,20 +51,32 @@ App({
 
     wx.getStorage({
       key: 'userId',
+<<<<<<< HEAD
       success: function(res) {
+=======
+      success: function (res) {
+>>>>>>> 更新
         getApp().globalData.userId = res.data
       },
     })
 
     wx.getStorage({
       key: 'userInfo',
+<<<<<<< HEAD
       success: function(res) {
+=======
+      success: function (res) {
+>>>>>>> 更新
         getApp().globalData.userInfo = res.data
       },
     })
     wx.getStorage({
       key: 'userIsAdmin',
+<<<<<<< HEAD
       success: function(res) {
+=======
+      success: function (res) {
+>>>>>>> 更新
         getApp().globalData.userIsAdmin = res.data
       },
     })
@@ -63,13 +85,21 @@ App({
      */
     wx.getStorage({
       key: 'shopMessage',
+<<<<<<< HEAD
       success: function(res) {
+=======
+      success: function (res) {
+>>>>>>> 更新
         that.globalData.shopMessage = res.data
         if (that.globalData.shopMessage.length != res.data.length) {
           wx.request({
             url: that.globalData.url + '/getMessage/getAllShop',
             method: "post",
+<<<<<<< HEAD
             success: function(e) {
+=======
+            success: function (e) {
+>>>>>>> 更新
               that.globalData.shopMessage = e.data
               wx.setStorage({
                 key: 'shopMessage',
@@ -79,11 +109,19 @@ App({
           })
         }
       },
+<<<<<<< HEAD
       fail: function() {
         wx.request({
           url: that.globalData.url + '/getMessage/getAllShop',
           method: "post",
           success: function(e) {
+=======
+      fail: function () {
+        wx.request({
+          url: that.globalData.url + '/getMessage/getAllShop',
+          method: "post",
+          success: function (e) {
+>>>>>>> 更新
             that.globalData.shopMessage = e.data
             wx.setStorage({
               key: 'shopMessage',
@@ -100,7 +138,11 @@ App({
     wx.request({
       url: that.globalData.url + '/getMessage/getAllSwiperMessage',
       method: "post",
+<<<<<<< HEAD
       success: function(e) {
+=======
+      success: function (e) {
+>>>>>>> 更新
         that.globalData.swiperImages = e.data
       }
     })
@@ -111,6 +153,7 @@ App({
 
     wx.getStorage({
       key: 'categoryMessage',
+<<<<<<< HEAD
       success: function(res) {
         that.globalData.categoryMessage = res.data
       },
@@ -119,6 +162,16 @@ App({
           url: that.globalData.url + '/getMessage/getAllCategoryMessage',
           method: "post",
           success: function(e) {
+=======
+      success: function (res) {
+        that.globalData.categoryMessage = res.data
+      },
+      fail: function () {
+        wx.request({
+          url: that.globalData.url + '/getMessage/getAllCategoryMessage',
+          method: "post",
+          success: function (e) {
+>>>>>>> 更新
             that.globalData.categoryMessage = e.data
             wx.setStorage({
               key: 'categoryMessage',
@@ -135,7 +188,11 @@ App({
     wx.request({
       url: that.globalData.url + '/getMessage/getAllNoticeMessage',
       method: "post",
+<<<<<<< HEAD
       success: function(e) {
+=======
+      success: function (e) {
+>>>>>>> 更新
         that.globalData.noticeMessage = e.data
       }
     })
@@ -146,7 +203,11 @@ App({
     wx.request({
       url: that.globalData.url + '/getMessage/getAllMessageDetail/1',
       method: "post",
+<<<<<<< HEAD
       success: function(e) {
+=======
+      success: function (e) {
+>>>>>>> 更新
         that.globalData.messageDetail = e.data
       }
     })
@@ -156,7 +217,11 @@ App({
     wx.request({
       url: that.globalData.url + '/getMessage/getLostMessage',
       method: "post",
+<<<<<<< HEAD
       success: function(e) {
+=======
+      success: function (e) {
+>>>>>>> 更新
         that.globalData.lost_new = e.data
       }
     })

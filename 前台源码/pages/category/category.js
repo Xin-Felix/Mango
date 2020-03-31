@@ -19,7 +19,12 @@ Page({
     categoryId: -1,
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20,
+<<<<<<< HEAD
     isLoading: false
+=======
+    isLoading: false,
+    imageUrl:""
+>>>>>>> 更新
   },
   activity_clear() {
     this.setData({
@@ -65,7 +70,12 @@ Page({
 
 
     this.setData({
+<<<<<<< HEAD
       allCategoryMessage: getApp().globalData.categoryMessage
+=======
+      allCategoryMessage: getApp().globalData.categoryMessage,
+      imageUrl:  getApp().globalData.imageUrl,
+>>>>>>> 更新
     })
     this.setData({
       height: app.globalData.height,

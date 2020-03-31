@@ -10,6 +10,10 @@ Page({
       title: '搜索', //导航栏 中间的标题
       height: 0
     },
+<<<<<<< HEAD
+=======
+    imageUrl: "",
+>>>>>>> 更新
     allCategoryMessage: [],
     search: "",
     activeIndex: 1,
@@ -87,7 +91,12 @@ Page({
      * 分类信息
      */
     this.setData({
+<<<<<<< HEAD
       allCategoryMessage: getApp().globalData.categoryMessage
+=======
+      allCategoryMessage: getApp().globalData.categoryMessage,
+      imageUrl:  getApp().globalData.imageUrl,
+>>>>>>> 更新
     })
     this.setData({
       height: app.globalData.height

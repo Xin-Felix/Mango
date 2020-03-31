@@ -21,11 +21,20 @@ Page({
     activeIndex: 1,
     isLastPage: false, //是否最后一页
     isUpdate: -1,
+<<<<<<< HEAD
     isLoading: false //页面是否渲染完毕
   },
   onReady() {
     let that = this
     setTimeout(function() {
+=======
+    isLoading: false,//页面是否渲染完毕,
+    imageUrl: ""
+  },
+  onReady() {
+    let that = this
+    setTimeout(function () {
+>>>>>>> 更新
       that.setData({
         isLoading: true
       })
@@ -41,7 +50,11 @@ Page({
       title: '提示',
       content: '如有需要请联系我',
       confirmText: "联系我",
+<<<<<<< HEAD
       success: function(e) {
+=======
+      success: function (e) {
+>>>>>>> 更新
         if (e.confirm) {
           wx.makePhoneCall({
             phoneNumber: '18996379281',
@@ -90,7 +103,11 @@ Page({
   getWeatherData() {
     let that = this;
     wx.openSetting({
+<<<<<<< HEAD
       success: function(res) {
+=======
+      success: function (res) {
+>>>>>>> 更新
         if (res.authSetting && res.authSetting["scope.userLocation"]) {
           //允许授权,则自动获取定位，并关闭二确弹窗，否则返回首页不处理
           wx.showToast({
@@ -107,7 +124,11 @@ Page({
       }
     })
   },
+<<<<<<< HEAD
   onPageScroll: function(e) { //判断滚轮位置
+=======
+  onPageScroll: function (e) { //判断滚轮位置
+>>>>>>> 更新
     if (e.scrollTop > 200) {
       this.setData({
         floorstatus: "block"
@@ -118,7 +139,11 @@ Page({
       });
     }
   },
+<<<<<<< HEAD
   goTop: function(e) { // 一键回到顶部
+=======
+  goTop: function (e) { // 一键回到顶部
+>>>>>>> 更新
     if (wx.pageScrollTo) {
       wx.pageScrollTo({
         scrollTop: 0
@@ -131,13 +156,21 @@ Page({
     }
   },
   //跳转到搜索页
+<<<<<<< HEAD
   search: function() {
+=======
+  search: function () {
+>>>>>>> 更新
     wx.navigateTo({
       url: '/pages/search/search',
     })
   },
   //跳转到详情页
+<<<<<<< HEAD
   to_message_detail: function(e) {
+=======
+  to_message_detail: function (e) {
+>>>>>>> 更新
     wx.navigateTo({
       url: '/pages/message_detail/message_detail?messageId=' + e.currentTarget.id,
     })
@@ -149,10 +182,17 @@ Page({
     var BMap = new bmap.BMapWX({
       ak: '1yb9NASdSjEYoxhTj59uD1qdyCHgKE6U'
     });
+<<<<<<< HEAD
     var fail = function(data) {
 
     };
     var success = function(data) {
+=======
+    var fail = function (data) {
+
+    };
+    var success = function (data) {
+>>>>>>> 更新
       var weatherData = data.currentWeather[0];
       that.setData({
         weatherData: weatherData
@@ -166,7 +206,11 @@ Page({
     });
   },
 
+<<<<<<< HEAD
   onLoad: function(options) {
+=======
+  onLoad: function (options) {
+>>>>>>> 更新
 
     let that = this
     this.getWeather();
@@ -174,6 +218,10 @@ Page({
      * 商家服务
      */
     this.setData({
+<<<<<<< HEAD
+=======
+      imageUrl:  getApp().globalData.imageUrl,
+>>>>>>> 更新
       takeout: getApp().globalData.shopMessage
     })
 
@@ -217,7 +265,11 @@ Page({
     })
 
   },
+<<<<<<< HEAD
   handleImgChange: function(e) {
+=======
+  handleImgChange: function (e) {
+>>>>>>> 更新
     this.setData({
       currentIndex: e.detail.current
     })
@@ -230,7 +282,11 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
+<<<<<<< HEAD
   onReachBottom: function() {
+=======
+  onReachBottom: function () {
+>>>>>>> 更新
     // 最后一页了，取消下拉功能
     if (this.data.isLastPage) {
       return
@@ -260,7 +316,11 @@ Page({
 
 
       },
+<<<<<<< HEAD
       complete: function(res) {
+=======
+      complete: function (res) {
+>>>>>>> 更新
         wx.hideLoading();
       },
     })
@@ -271,7 +331,11 @@ Page({
     wx.request({
       url: getApp().globalData.url + '/getMessage/getLastNewMessage/' + getApp().globalData.userId,
       method: 'post',
+<<<<<<< HEAD
       complete: function(e) {
+=======
+      complete: function (e) {
+>>>>>>> 更新
 
         if (e.statusCode != 200) {
           return
@@ -279,7 +343,11 @@ Page({
 
         wx.getStorage({
           key: 'lastNewMessage',
+<<<<<<< HEAD
           success: function(res) {
+=======
+          success: function (res) {
+>>>>>>> 更新
             if (res.data != e.data.newMessageId) {
               wx.playBackgroundAudio({
                 dataUrl: 'http://downsc.chinaz.net/Files/DownLoad/sound1/201609/7824.wav',
@@ -290,7 +358,11 @@ Page({
                 content: '内容：' + e.data.newMessageDetail,
                 confirmText: "去查看",
                 cancelText: "稍后去看",
+<<<<<<< HEAD
                 success: function(e) {
+=======
+                success: function (e) {
+>>>>>>> 更新
                   if (e.confirm) {
                     wx.navigateTo({
                       url: '/pages/me_xiaoxi/me_xiaoxi',

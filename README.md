@@ -26,6 +26,9 @@
  
  5.因为微信小程序登录需要用到appid和密钥,登陆微信公众平台查看小程序的appid和密钥,然后找到后台源码Controller层的LoginController.java修改你的appid和密钥
  
+ 6.去后台源码/Mango/src/main/java/work/huangxin/mango/util/isDelete/IsDelete.java添加你自己的oss信息,不然前台的图片无法真正的删除,只是数据库不存在而已
+
+ 
  6.因为用到oss,帖子部分的图片地址都是手动添加的,如果有自己的oss记得替换,不然可能图片无法正常显示
  
  7.数据库是mysql,版本需要大于5.5,否则会有冲突无法导入sql文件

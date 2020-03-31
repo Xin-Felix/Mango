@@ -16,24 +16,21 @@
  2.后台(springBoot+mybatis+mysql)
  
 ### 如何使用
- 1.打开前台代码先修改app.js去配置服务器地址
+ 1.打开前台代码先修改app.js去配置服务器地址和oss的地址(用于展示图片)
  
  2.打开前台util/config.js配置阿里云oss(如果有自己需求可以直接在后台增加上传的代码)
  
  3.后台就不多说了,创建sql表,去修改yml文件内容
  
- 4.数据库请提前储存部分信息,不然无法正常进入小程序
+ 4.数据库请提前储存部分信息(sql文件带测试数据,进入程序自己可以添加数据),不然无法正常进入小程序
  
  5.因为微信小程序登录需要用到appid和密钥,登陆微信公众平台查看小程序的appid和密钥,然后找到后台源码Controller层的LoginController.java修改你的appid和密钥
  
- 6.去后台源码/Mango/src/main/java/work/huangxin/mango/util/isDelete/IsDelete.java添加你自己的oss信息,不然前台的图片无法真正的删除,只是数据库不存在而已
-
- 
- 6.因为用到oss,帖子部分的图片地址都是手动添加的,如果有自己的oss记得替换,不然可能图片无法正常显示
+ 6.去后台源码/Mango/src/main/java/work/huangxin/mango/util/isDelete/IsDelete.java添加你自己的oss信息(删除oss的文件的操作)
  
  7.数据库是mysql,版本需要大于5.5,否则会有冲突无法导入sql文件
  
-
+ 
 ### 程序本身的一些功能
  1.发布帖子
 

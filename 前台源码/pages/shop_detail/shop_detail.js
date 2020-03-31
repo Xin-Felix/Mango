@@ -10,10 +10,6 @@ Page({
       title: '店面详情', //导航栏 中间的标题
       height: 0
     },
-<<<<<<< HEAD
-=======
-    imageUrl: "",
->>>>>>> 更新
     markers: [],
     shopMessage: {},
     // 此页面 页面内容距最顶部的距离
@@ -24,22 +20,13 @@ Page({
 
     let that = this
     this.setData({
-<<<<<<< HEAD
       height: app.globalData.height
-=======
-      height: app.globalData.height,
-      imageUrl: getApp().globalData.imageUrl
->>>>>>> 更新
     })
 
     wx.request({
       url: getApp().globalData.url + '/getMessage/getShopMessage/' + options.shopId,
       method: "post",
-<<<<<<< HEAD
       success: function(e) {
-=======
-      success: function (e) {
->>>>>>> 更新
         if (e.statusCode != 200) {
           wx.showModal({
             title: '错误',
@@ -51,11 +38,7 @@ Page({
           shopMessage: e.data
         })
       },
-<<<<<<< HEAD
       complete: function() {
-=======
-      complete: function () {
->>>>>>> 更新
 
         that.setData({
           markers: [{
@@ -69,11 +52,7 @@ Page({
           }]
         })
 
-<<<<<<< HEAD
         setTimeout(function() {
-=======
-        setTimeout(function () {
->>>>>>> 更新
           that.setData({
             isLoading: true
           })

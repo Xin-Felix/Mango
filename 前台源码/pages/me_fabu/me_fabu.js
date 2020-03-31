@@ -10,10 +10,7 @@ Page({
       title: '我的发布', //导航栏 中间的标题
       height: 0
     },
-<<<<<<< HEAD
-=======
     imageUrl:"",
->>>>>>> 更新
     allCategoryMessage: [],
     showDialog1: false,
     showDialog2: false,
@@ -252,12 +249,8 @@ Page({
 
     let that = this
     this.setData({
-<<<<<<< HEAD
-      allCategoryMessage: getApp().globalData.categoryMessage
-=======
       allCategoryMessage: getApp().globalData.categoryMessage,
-      imageUrl:  getApp().globalData.imageUrl,
->>>>>>> 更新
+      imageUrl:getApp().globalData.imageUrl,
     })
     this.setData({
       height: app.globalData.height

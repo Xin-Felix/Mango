@@ -4,27 +4,17 @@
 		"ignore": []
 	},
 	"setting": {
-<<<<<<< HEAD
-		"urlCheck": true,
-		"es6": true,
-		"enhance": false,
-		"postcss": true,
-=======
 		"urlCheck": false,
 		"es6": true,
 		"enhance": false,
 		"postcss": true,
 		"preloadBackgroundData": false,
->>>>>>> 更新
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
 		"autoAudits": false,
-<<<<<<< HEAD
-=======
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
->>>>>>> 更新
 		"uglifyFileName": true,
 		"checkInvalidKey": true,
 		"checkSiteMap": false,

@@ -10,10 +10,7 @@ Page({
       title: '详情', //导航栏 中间的标题
       height: 0,
     },
-<<<<<<< HEAD
-=======
-    imageUrl: "",
->>>>>>> 更新
+    imageUrl:"",
     showDialog1: false,
     showDialog2: false,
     showDialog3: false,
@@ -36,11 +33,7 @@ Page({
     isLoading: false //页面是否渲染完毕
   },
   //一键返回顶部
-<<<<<<< HEAD
   onPageScroll: function(e) { //判断滚轮位置
-=======
-  onPageScroll: function (e) { //判断滚轮位置
->>>>>>> 更新
     if (e.scrollTop > 200) {
       this.setData({
         floorstatus: "block"
@@ -51,11 +44,7 @@ Page({
       });
     }
   },
-<<<<<<< HEAD
   goTop: function(e) { // 一键回到顶部
-=======
-  goTop: function (e) { // 一键回到顶部
->>>>>>> 更新
     if (wx.pageScrollTo) {
       wx.pageScrollTo({
         scrollTop: 0
@@ -77,11 +66,7 @@ Page({
       content: "手机号:" + that.data.messageDetail.userPhone + ",用户Id:" + that.data.messageDetail.userId + ",用户名:" + that.data.messageDetail.mangoUser.userNickname + ",文章id:" + that.data.messageDetail.messageId,
       cancelText: "复制号码",
       confirmText: "系统回复",
-<<<<<<< HEAD
       success: function(e) {
-=======
-      success: function (e) {
->>>>>>> 更新
         if (e.confirm) {
           that.setData({
             showDialog4: true
@@ -124,11 +109,7 @@ Page({
       url: getApp().globalData.url + '/addNewMessageByAdmin/' + that.data.userId + '/' + that.data.messageDetail.messageId + "/" + that.data.messageDetail.userId,
       data: that.data.comment_reply,
       method: "post",
-<<<<<<< HEAD
       success: function(e) {
-=======
-      success: function (e) {
->>>>>>> 更新
         that.setData({
           comment_reply: "",
         })
@@ -156,11 +137,7 @@ Page({
 
 
       },
-<<<<<<< HEAD
       complete: function() {
-=======
-      complete: function () {
->>>>>>> 更新
         wx.hideLoading()
       }
     })
@@ -174,11 +151,7 @@ Page({
         title: '提示',
         content: '好像没有登录噢~',
         confirmText: "去登陆",
-<<<<<<< HEAD
         success: function(e) {
-=======
-        success: function (e) {
->>>>>>> 更新
           if (e.confirm) {
             wx.switchTab({
               url: '/pages/me/me',
@@ -192,20 +165,12 @@ Page({
     wx.showModal({
       title: '提示',
       content: '是否删除当前内容~',
-<<<<<<< HEAD
       success: function(res) {
-=======
-      success: function (res) {
->>>>>>> 更新
         if (res.confirm) {
           wx.request({
             url: getApp().globalData.url + '/deleteCommentByCommentId/' + that.data.userId + '/' + e.target.id,
             method: "post",
-<<<<<<< HEAD
             success: function(result) {
-=======
-            success: function (result) {
->>>>>>> 更新
 
               if (result.statusCode != 200) {
                 wx.showModal({
@@ -219,19 +184,11 @@ Page({
                 wx.showModal({
                   title: '提示',
                   content: '删除成功~',
-<<<<<<< HEAD
                   success: function() {
                     wx.request({
                       url: getApp().globalData.url + '/getMessageDetailById/' + that.data.messageDetail.messageId,
                       method: "post",
                       success: function(e) {
-=======
-                  success: function () {
-                    wx.request({
-                      url: getApp().globalData.url + '/getMessageDetailById/' + that.data.messageDetail.messageId,
-                      method: "post",
-                      success: function (e) {
->>>>>>> 更新
                         that.setData({
                           messageDetail: e.data,
                         })
@@ -256,11 +213,7 @@ Page({
         title: '提示',
         content: '好像没有登录噢~',
         confirmText: "去登陆",
-<<<<<<< HEAD
         success: function(e) {
-=======
-        success: function (e) {
->>>>>>> 更新
           if (e.confirm) {
             wx.switchTab({
               url: '/pages/me/me',
@@ -273,20 +226,12 @@ Page({
     wx.showModal({
       title: '提示',
       content: '是否删除当前内容~',
-<<<<<<< HEAD
       success: function(res) {
-=======
-      success: function (res) {
->>>>>>> 更新
         if (res.confirm) {
           wx.request({
             url: getApp().globalData.url + '/deleteCommentReplyByCommentId/' + that.data.userId + '/' + e.target.id,
             method: "post",
-<<<<<<< HEAD
             success: function(result) {
-=======
-            success: function (result) {
->>>>>>> 更新
 
               if (result.statusCode != 200) {
                 wx.showModal({
@@ -300,19 +245,11 @@ Page({
                 wx.showModal({
                   title: '提示',
                   content: '删除成功~',
-<<<<<<< HEAD
                   success: function() {
                     wx.request({
                       url: getApp().globalData.url + '/getMessageDetailById/' + that.data.messageDetail.messageId,
                       method: "post",
                       success: function(e) {
-=======
-                  success: function () {
-                    wx.request({
-                      url: getApp().globalData.url + '/getMessageDetailById/' + that.data.messageDetail.messageId,
-                      method: "post",
-                      success: function (e) {
->>>>>>> 更新
                         that.setData({
                           messageDetail: e.data,
                         })
@@ -347,11 +284,7 @@ Page({
         title: '提示',
         content: '好像没有登录噢~',
         confirmText: "去登陆",
-<<<<<<< HEAD
         success: function(e) {
-=======
-        success: function (e) {
->>>>>>> 更新
           if (e.confirm) {
             wx.switchTab({
               url: '/pages/me/me',
@@ -380,11 +313,7 @@ Page({
       url: getApp().globalData.url + '/addCommentReply/' + that.data.messageDetail.messageId,
       method: "post",
       data: list,
-<<<<<<< HEAD
       success: function(e) {
-=======
-      success: function (e) {
->>>>>>> 更新
         wx.hideLoading()
         if (e.statusCode != 200) {
           wx.showModal({
@@ -398,19 +327,11 @@ Page({
           wx.showModal({
             title: '提示',
             content: '回复成功~',
-<<<<<<< HEAD
             success: function() {
               wx.request({
                 url: getApp().globalData.url + '/getMessageDetailById/' + that.data.messageDetail.messageId,
                 method: "post",
                 success: function(e) {
-=======
-            success: function () {
-              wx.request({
-                url: getApp().globalData.url + '/getMessageDetailById/' + that.data.messageDetail.messageId,
-                method: "post",
-                success: function (e) {
->>>>>>> 更新
                   that.setData({
                     comment_reply: "",
                     messageDetail: e.data,
@@ -453,11 +374,7 @@ Page({
         title: '提示',
         content: '好像没有登录噢~',
         confirmText: "去登陆",
-<<<<<<< HEAD
         success: function(e) {
-=======
-        success: function (e) {
->>>>>>> 更新
           if (e.confirm) {
             wx.switchTab({
               url: '/pages/me/me',
@@ -488,11 +405,7 @@ Page({
       url: getApp().globalData.url + '/addCommentReply/' + that.data.messageDetail.messageId,
       method: "post",
       data: list,
-<<<<<<< HEAD
       success: function(e) {
-=======
-      success: function (e) {
->>>>>>> 更新
         wx.hideLoading()
         if (e.statusCode != 200) {
           wx.showModal({
@@ -505,20 +418,12 @@ Page({
           wx.showModal({
             title: '提示',
             content: '回复成功~',
-<<<<<<< HEAD
             success: function() {
-=======
-            success: function () {
->>>>>>> 更新
 
               wx.request({
                 url: getApp().globalData.url + '/getMessageDetailById/' + that.data.messageDetail.messageId,
                 method: "post",
-<<<<<<< HEAD
                 success: function(e) {
-=======
-                success: function (e) {
->>>>>>> 更新
                   that.setData({
                     comment_reply: "",
                     messageDetail: e.data,
@@ -556,11 +461,7 @@ Page({
         title: '提示',
         content: '好像没有登录噢~',
         confirmText: "去登陆",
-<<<<<<< HEAD
         success: function(e) {
-=======
-        success: function (e) {
->>>>>>> 更新
           if (e.confirm) {
             wx.switchTab({
               url: "/pages/me/me"
@@ -589,11 +490,7 @@ Page({
       url: getApp().globalData.url + '/addComment/' + that.data.userId + '/' + that.data.messageDetail.messageId + '/' + that.data.messageDetail.userId,
       method: "post",
       data: that.data.comment_input,
-<<<<<<< HEAD
       success: function(e) {
-=======
-      success: function (e) {
->>>>>>> 更新
         wx.hideLoading()
         if (e.statusCode != 200) {
           wx.showModal({
@@ -608,19 +505,11 @@ Page({
             title: '提示',
             content: '留言成功',
             showCancel: false,
-<<<<<<< HEAD
             success: function() {
               wx.request({
                 url: getApp().globalData.url + '/getMessageDetailById/' + that.data.messageDetail.messageId,
                 method: "post",
                 success: function(e) {
-=======
-            success: function () {
-              wx.request({
-                url: getApp().globalData.url + '/getMessageDetailById/' + that.data.messageDetail.messageId,
-                method: "post",
-                success: function (e) {
->>>>>>> 更新
                   that.setData({
                     comment_input: "",
                     messageDetail: e.data,
@@ -661,11 +550,7 @@ Page({
       title: '提示',
       content: '是否删除?',
       confirmColor: "#f00",
-<<<<<<< HEAD
       success: function(e) {
-=======
-      success: function (e) {
->>>>>>> 更新
         if (e.confirm) {
           wx.showLoading({
             title: '稍等噢~',
@@ -676,11 +561,7 @@ Page({
           wx.request({
             url: getApp().globalData.url + '/deleteMessageById/' + that.data.userId + '/' + that.data.messageDetail.messageId,
             method: "post",
-<<<<<<< HEAD
             success: function(e) {
-=======
-            success: function (e) {
->>>>>>> 更新
               wx.hideLoading()
               if (e.statusCode != 200) {
                 wx.showModal({
@@ -695,11 +576,7 @@ Page({
                   title: '提示',
                   content: '删除成功',
                   showCancel: false,
-<<<<<<< HEAD
                   success: function() {
-=======
-                  success: function () {
->>>>>>> 更新
                     wx.showLoading({
                       title: '更新主页信息中~',
                     })
@@ -714,11 +591,7 @@ Page({
                   title: '提示',
                   content: '非法操作，请联系管理员',
                   showCancel: false,
-<<<<<<< HEAD
                   success: function() {
-=======
-                  success: function () {
->>>>>>> 更新
                     that.setData({
                       user_message: []
                     })
@@ -740,11 +613,7 @@ Page({
     wx.request({
       url: getApp().globalData.url + '/getMessage/getLostMessage',
       method: "post",
-<<<<<<< HEAD
       success: function(e) {
-=======
-      success: function (e) {
->>>>>>> 更新
         getApp().globalData.lost_new = e.data
       }
     })
@@ -754,11 +623,7 @@ Page({
       success: (res) => {
         getApp().globalData.messageDetail = res.data
       },
-<<<<<<< HEAD
       complete: function() {
-=======
-      complete: function () {
->>>>>>> 更新
         wx.switchTab({
           url: '/pages/index/index',
         })
@@ -776,11 +641,7 @@ Page({
         title: '提示',
         content: '好像没有登录噢~',
         confirmText: "去登陆",
-<<<<<<< HEAD
         success: function(e) {
-=======
-        success: function (e) {
->>>>>>> 更新
           if (e.confirm) {
             wx.switchTab({
               url: "/pages/me/me"
@@ -803,11 +664,7 @@ Page({
       wx.request({
         url: getApp().globalData.url + '/deleteCollection/' + that.data.userId + '/' + that.data.messageDetail.messageId,
         method: "post",
-<<<<<<< HEAD
         success: function(e) {
-=======
-        success: function (e) {
->>>>>>> 更新
           if (e.statusCode != 200) {
             return
           }
@@ -823,11 +680,7 @@ Page({
       wx.request({
         url: getApp().globalData.url + '/addCollection/' + that.data.userId + '/' + that.data.messageDetail.messageId,
         method: "post",
-<<<<<<< HEAD
         success: function(e) {
-=======
-        success: function (e) {
->>>>>>> 更新
 
           if (e.statusCode != 200) {
             return
@@ -844,11 +697,7 @@ Page({
   onReady() {
     let that = this;
     /**页面渲染完毕 */
-<<<<<<< HEAD
     setTimeout(function() {
-=======
-    setTimeout(function () {
->>>>>>> 更新
       that.setData({
         isLoading: true
       })
@@ -889,21 +738,13 @@ Page({
     let that = this;
     this.setData({
       height: app.globalData.height,
-<<<<<<< HEAD
-      userInfo: getApp().globalData.userInfo
-=======
       userInfo: getApp().globalData.userInfo,
-      imageUrl:  getApp().globalData.imageUrl,
->>>>>>> 更新
+      imageUrl:getApp().globalData.imageUrl,
     })
 
     wx.getStorage({
       key: 'userId',
-<<<<<<< HEAD
       success: function(res) {
-=======
-      success: function (res) {
->>>>>>> 更新
         that.setData({
           userId: res.data
         })
@@ -912,11 +753,7 @@ Page({
 
     wx.getStorage({
       key: 'userInfo',
-<<<<<<< HEAD
       success: function(res) {
-=======
-      success: function (res) {
->>>>>>> 更新
         that.setData({
           userInfo: res.data
         })
@@ -935,11 +772,7 @@ Page({
     wx.request({
       url: getApp().globalData.url + '/getMessageDetailById/' + options.messageId,
       method: "post",
-<<<<<<< HEAD
       success: function(e) {
-=======
-      success: function (e) {
->>>>>>> 更新
         if (e.statusCode != 200) {
           wx.showModal({
             title: '提示',
@@ -954,11 +787,7 @@ Page({
             content: '文章不存在或已被删除',
             showCancel: false,
             confirmColor: "返回",
-<<<<<<< HEAD
             success: function() {
-=======
-            success: function () {
->>>>>>> 更新
               wx.navigateBack({
                 delta: 1
               })
@@ -970,11 +799,7 @@ Page({
           messageDetail: e.data
         })
       },
-<<<<<<< HEAD
       complete: function() {
-=======
-      complete: function () {
->>>>>>> 更新
 
 
       }
@@ -991,11 +816,7 @@ Page({
     wx.request({
       url: getApp().globalData.url + '/addCollection/checkIsCollection/' + that.data.userId + '/' + options.messageId,
       method: "post",
-<<<<<<< HEAD
       success: function(e) {
-=======
-      success: function (e) {
->>>>>>> 更新
         if (e.statusCode != 200) {
           return
         }
@@ -1014,11 +835,7 @@ Page({
     wx.request({
       url: getApp().globalData.url + '/share/addShareCount/' + that.data.messageDetail.messageId,
       method: "post",
-<<<<<<< HEAD
       success: function(e) {}
-=======
-      success: function (e) { }
->>>>>>> 更新
     })
   },
   /**
@@ -1031,11 +848,7 @@ Page({
   onShareAppMessage(e) {
     return {
       title: "来看看~",
-<<<<<<< HEAD
       success: function(res) {},
-=======
-      success: function (res) { },
->>>>>>> 更新
     }
   }
 })

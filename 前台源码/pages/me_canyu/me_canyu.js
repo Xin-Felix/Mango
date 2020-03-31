@@ -10,10 +10,7 @@ Page({
       title: '我的参与', //导航栏 中间的标题
       height: 0
     },
-<<<<<<< HEAD
-=======
-    imageUrl: "",
->>>>>>> 更新
+    imageUrl:"",
     allCategoryMessage: [],
     userId: -1,
     activeIndex: 1,
@@ -33,11 +30,7 @@ Page({
     }, 500)
   },
   //一键返回顶部
-<<<<<<< HEAD
   onPageScroll: function(e) { //判断滚轮位置
-=======
-  onPageScroll: function (e) { //判断滚轮位置
->>>>>>> 更新
     if (e.scrollTop > 200) {
       this.setData({
         floorstatus: "block"
@@ -48,11 +41,7 @@ Page({
       });
     }
   },
-<<<<<<< HEAD
   goTop: function(e) { // 一键回到顶部
-=======
-  goTop: function (e) { // 一键回到顶部
->>>>>>> 更新
     if (wx.pageScrollTo) {
       wx.pageScrollTo({
         scrollTop: 0
@@ -67,12 +56,8 @@ Page({
   onLoad() {
     let that = this
     this.setData({
-<<<<<<< HEAD
-      allCategoryMessage: getApp().globalData.categoryMessage
-=======
       allCategoryMessage: getApp().globalData.categoryMessage,
-      imageUrl:  getApp().globalData.imageUrl,
->>>>>>> 更新
+      imageUrl:getApp().globalData.imageUrl,
     })
     this.setData({
       height: app.globalData.height
@@ -103,11 +88,7 @@ Page({
           user_message: that.data.user_message.concat(res.data)
         })
       },
-<<<<<<< HEAD
       complete: function(res) {
-=======
-      complete: function (res) {
->>>>>>> 更新
         wx.hideLoading();
       },
     })
@@ -115,11 +96,7 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-<<<<<<< HEAD
   onReachBottom: function() {
-=======
-  onReachBottom: function () {
->>>>>>> 更新
     // 最后一页了，取消下拉功能
     if (this.data.isLastPage) {
       return
@@ -128,11 +105,7 @@ Page({
   },
 
   //跳转到详情页
-<<<<<<< HEAD
   to_message_detail: function(e) {
-=======
-  to_message_detail: function (e) {
->>>>>>> 更新
     wx.navigateTo({
       url: '/pages/message_detail/message_detail?messageId=' + e.currentTarget.id,
     })

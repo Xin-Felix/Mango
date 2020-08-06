@@ -1,0 +1,71 @@
+<view class="htmleaf-container" style="background:white;display:{{isLoading?'none':'block'}};height:100%;">
+
+  <view class="spinner-box" style="margin:0 auto;">
+    <view class="pulse-container" style="margin-top:500rpx;">
+      <view class="pulse-bubble pulse-bubble-1"></view>
+      <view class="pulse-bubble pulse-bubble-2"></view>
+      <view class="pulse-bubble pulse-bubble-3"></view>
+    </view>
+  </view>
+
+</view>
+
+<view style="display:{{isLoading?'block':'none'}}">
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <view class='home-page' style='margin-top: {{height*2+20}}px'>
+    <view class="body_top">
+      <swiper circular interval="3000" autoplay="{{true}}" indicator-dots indicator-active-color="#3cc">
+        <block wx:for="{{shopMessage.shopImages}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item.shopImages}}" id="{{item.shopImages}}" mode="widthFix" bindtap='look_image' />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="user_message">
+      <view class="user_image">
+        <image src="{{shopMessage.shopAvatar}}" mode="widthFix" />
+      </view>
+      <view class="user_message_detail">
+        <view class="user_message_detail_title">{{shopMessage.shopName}}</view>
+        <view class="user_message_detail_place">
+          <text>合作时间：{{shopMessage.shopCreatTime}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="user_message_detail_intro">
+      <view class="intro">{{shopMessage.shopIntro}}</view>
+    </view>
+    <view class="main_goods">
+      <view class="main_goods_title">主营商品</view>
+      <view class="main_goods_item">
+        <block wx:for="{{shopMessage.shopBusinesses}}" wx:key="{{index}}">
+          <view class="main_good">
+            <view class="main_goods_item_image">
+              <image src="{{item.shopGoodsImage}}" mode="widthFix" />
+            </view>
+            <view class="main_goods_item_title">{{item.shopGoodsTitle}}</view>
+            <view class="price">{{item.shopGoodsPrice}}元</view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="map">
+      <view class="main_goods_title">位置</view>
+      <view class="map_back">
+        <map longitude="{{shopMessage.shopLongitude}}" latitude="{{shopMessage.shopLatitude}}" scale="16" show-location="true" markers="{{markers}}" />
+      </view>
+    </view>
+    <view class="tips">
+      <view>·以上信息均由管理员整理</view>
+      <view>·如出现问题请及时联系管理员</view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="other_operation">
+      <button class="zhuye iconfont icon-zhuye" bindtap="to_index"></button>
+      <button open-type="share" class="share iconfont icon-fenxiang"></button>
+    </view>
+    <view class="phone" bindtap='call' id="{{shopMessage.shopPhone}}">立即联系</view>
+  </view>
+</view>

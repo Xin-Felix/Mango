@@ -1,0 +1,19 @@
+<!-- 组件模板 -->
+<view class="wrapper">
+
+  <slot></slot>
+  <!-- 搜索框开始 -->
+    <view class='tit_seabox'>
+        <view class="tit_seabox_bar {{addflag?'tit_seabox_add':''}} {{searchflag?'tit_start_search':''}}">
+            <icon type='search' size="32rpx"></icon>
+            <input type="text" focus="{{true}}" bindinput="searchList" bindconfirm="endsearchList" bindfocus='getfocus' bindblur="blursearch" confirm-type='search' value='{{searchstr}}' placeholder='请输入关键词~'  />
+            <icon bindtap='activity_clear' wx:if="{{searchflag}}" type='clear' size="28rpx"></icon>
+        
+        </view>
+        <view wx:if="{{searchflag}}" bindtap='cancelsearch' class="activity_seabtn">取消</view>
+        <view class='activity_add' wx:if="{{addflag}}"><image bindtap='addhandle' src='{{addimg}}'></image></view>
+    </view>
+<!-- 搜索框结束 -->
+
+   
+</view>

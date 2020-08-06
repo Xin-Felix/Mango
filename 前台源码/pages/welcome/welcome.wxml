@@ -1,0 +1,15 @@
+<view class='bg'>
+  <image src='../../images/other/index.jpeg' class='full' mode="aspectFill"></image>
+  <view class="myButton" bindtap="next" style="display:{{isLoad==1?'':'none'}}">{{time}}   跳过</view>
+</view>
+<view class="bottom">
+  <view class="main">
+    <view class="logo">
+      <image src="../../images/other/logo.png" mode="widthFix" />
+    </view>
+    <view class="detail">
+      <view class="title">芒果 New Life</view>
+      <view class="intro">便利你的生活</view>
+    </view>
+  </view>
+</view>

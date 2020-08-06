@@ -1,0 +1,53 @@
+ .message_item {
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     margin-top: 10rpx;
+ }
+ 
+ .back {
+     background-color: white;
+     padding: 10rpx;
+ }
+ 
+ .title {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+ 
+ .main_title {
+     font-weight: 800;
+ }
+ 
+ .main_time {
+     font-weight: 200;
+     font-size: 25rpx;
+     color: #999;
+ }
+ 
+ .message_detail {
+     height: 80rpx;
+     font-size: 28rpx;
+     overflow: hidden;
+     /*超出部分隐藏*/
+     text-overflow: ellipsis;
+     /* 超出部分显示省略号 */
+     white-space: nowrap;
+     /*规定段落中的文本不进行换行 */
+ }
+ 
+ .message_operation {
+     position: absolute;
+     right: 10rpx;
+     bottom: 0;
+     color: #999;
+ }
+
+ .goTop {
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 50rpx;
+  right: 30rpx;
+}

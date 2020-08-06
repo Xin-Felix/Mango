@@ -1,0 +1,61 @@
+.bg image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -999;
+}
+
+.myButton {
+    position: fixed;
+    z-index: 9999999;
+    bottom: 230rpx;
+    width: 130rpx;
+    right: 30rpx;
+    padding: 20rpx;
+    border-radius: 60rpx;
+    border: 1rpx solid #999;
+    text-align: center;
+    font-weight: 600;
+    color: #999;
+    background-color: rgba(240, 240, 240, 0.5);
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    height: 200rpx;
+    width: 100%;
+}
+
+.logo image {
+    width: 150rpx;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.detail .title {
+    font-size: 30rpx;
+    font-weight: 800;
+    letter-spacing: 5rpx;
+}
+
+.detail .intro {
+    font-size: 28rpx;
+    font-weight: 200;
+    letter-spacing: 5rpx;
+}

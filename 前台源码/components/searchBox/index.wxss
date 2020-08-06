@@ -1,0 +1,38 @@
+/*搜索 开始*/
+
+.nav-wrap {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  color: #000;
+  z-index: 9999999;
+}
+
+.tit_seabox {
+  width: calc(100% - 64rpx);
+  background: #fff;
+  height: 30px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tit_seabox_bar {
+  width: calc(100% - 16px);
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background: #f5f5f5;
+  padding-left: 16px;
+}
+
+.tit_seabox input {
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  width: 100%;
+  margin-right: 16px;
+}

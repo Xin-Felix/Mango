@@ -1,0 +1,185 @@
+page {
+    background-color: rgb(240, 240, 240);
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('iconfont.eot?t=1565608797771');
+    /* IE9 */
+    src: url('iconfont.eot?t=1565608797771#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAT8AAsAAAAACbQAAASuAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqGSIUxATYCJAMUCwwABCAFhG0HURtGCFGUTk6M7AtsG/aEzSguYMERWDAbAMb4AyoEAEG54wAOAEQArbVZOfl/xBsk0Uj3hCdCUeuEDLERCqHQTUP7v97NXgQL1DydbsWVnnjNkA2k6IRwYqpfpl+FDThgTSCwUBY/AQLihsbZwLtBCmlpIS4qFKWFQt3F0c8o+X+OpV4+PzvMf5UuGcEVgMcHdHZYubUXDWy8gcxk7nPfMHZ5kU8T0DQiAbFS1bMG5DJ9V0A44w0akCdscgUuqI1lwcUM4R4k6jiFfARw531/+IK05CAqEugHtw8q9VDySn9MpkZ3ocVBgHw4D9g1EmaBTLgp9J2hgtwsSlNeTlsAmmpRHGoR+zH6Y3JXF5FqQ4am8Q+PJMoCoQRd14GwC4nMq8Um8cqyibxGy6r1yVBxLbrCudBELwgZhFXQDaPemlohinv4+ing76mPG0ulSIihKcNc99+zZPchU+legKX1LoeeQqjeY2tj26RCopq6hQBs3CWSx+xZ3aY7cvPU7eQO3kvtujYupBbxfHLOm3mZyELJw4cV4OL9mor4wQM1vPCovl73TQXHD+veHlXCQy+1z/ebTHPNi/9XvD2qf33YcPowbN0j9cmD0NX369Bcch4vphYi3FZk06/vdDcgJFfcZCqxVDmrpOqLEE6bF5NNs3LtLoSC07aUy1Y65s8HYL2MbKybGOLKXTuzvK0CsHFTQbUsDKpJlvoZNmEzXhBq0g4brGk0Zaaj9W9euOyxf183ZWa9XvW2x/j6ZfIjfnzjVMHbCYxnyLLwMo9Cf3uQ+lTwoNvrZ2BNQoYXFd8V1xU3oYMAh3FhdWG1LwcabnD9cXeD/O+FaFhz+VMLTb7/31Jeuj7lknenZQbtY8voPD3wjIJM19zAaAZNHX6X7MBzTX2tvl5uPlxNdHQQtloNNdUU395BqMWwvDpldo+eAf4W3eyks6dc8Qk6P7kKHMF6sKFsGBT8fVLOwaqP43NcN/739QvhiZmzR9BlNCKlbnqP5R56N4ZCU1bPJE6j/fwd5QfZyGtMAaJGgPRe/AV3X46ewS8nUrcJZaiuSUquTMwLjgu2X+YKtJwMfPegIuhK/y5tHtwyOH0vDAZoP0hnKASAt4TcB9A+kZ6pMlBYkP4p9j/7GRvfxb3a3Qp+y5U0wNMgcyuMthdkzWU/i54s/6vkDUeyotTtRZbaLZlUX9gl5w0pfqCWfynU5+UwgUEQeYKak0OIKsOQ1EaRGTsLhZY5KNXmoWmG+npLPwElZAUwbQKAoMcuiLo8QNLjBjJjX0BhyGco9URB007wumPLeDxTLmCNiPVIOwTxOpuVM50i4zf3xwanWSPElR6hDgsOPolSk1LSRTW2YmGII46BhjRR5BAn2CyoCjwPm802ZBdsnVgnJhlF0Z6XnMwVvVOSzmYBxjIBpiHC9BCtIRCejo0V50wXMZmv7w8zcDLTECo6yqJ1MIEDPz+SKklKA6RaZ23UcSnLHQYySCMScXgbR2BjgVRBD2Y2cjaIvXhdJ0xHlMTYIWOXJxlN4prqkqY3WO7xDDTp9y0CSVAETUgIKVRXvNVgdlqlZv6MxO4xh9HmHIKVQ41OjZXTDC6xAgAAAA==') format('woff2'), url('iconfont.woff?t=1565608797771') format('woff'), url('iconfont.ttf?t=1565608797771') format('truetype'), /* chrome,
+         firefox,
+         opera,
+         Safari,
+         Android,
+         iOS 4.2+ */
+    url('iconfont.svg?t=1565608797771#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+button::after {
+    border: none;
+    outline: none;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 50rpx;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zhuye:before {
+    content: "\e604";
+}
+
+.icon-fenxiang:before {
+    content: "\e627";
+}
+
+swiper {
+    height: 300rpx; 
+    background-color: white;
+}
+
+.body_top image {
+    width: 100%;
+}
+
+.user_message {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 10rpx;
+}
+
+.user_image image {
+    width: 120rpx;
+    border-radius: 50%;
+}
+
+.user_message_detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10rpx;
+}
+
+.user_message_detail_title {
+    font-weight: 800;
+    color: cadetblue;
+}
+
+.user_message_detail_place {
+    font-weight: 200;
+    font-size: 25rpx;
+}
+
+.user_message_detail_place text {
+    color: tan;
+}
+
+.user_message_detail_intro {
+    background-color: white;
+    padding: 10rpx;
+    padding-top: 0rpx;
+    font-size: 27rpx;
+    letter-spacing: 5rpx;
+}
+
+.main_goods {
+    background-color: white;
+    margin-top: 10rpx;
+    padding: 10rpx;
+}
+
+.main_goods_title {
+    font-weight: 800;
+}
+
+.main_goods_item {
+    margin-top: 10rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main_good {
+    display: flex;
+    flex-direction: column;
+    margin: 10rpx;
+}
+
+.main_goods_item_image image {
+    width: 340rpx;
+}
+
+.main_goods_item_title {
+    font-size: 30rpx;
+}
+
+.price {
+    color: red;
+    font-size: 25rpx;
+}
+
+.map {
+    background-color: white;
+    padding: 20rpx;
+    margin-top: 10rpx;
+}
+
+.map_back map {
+    margin-top: 10rpx;
+    width: 97%;
+    padding: 10rpx;
+    height: 300rpx;
+}
+
+.tips {
+    padding: 10rpx;
+    height: 200rpx;
+    color: red;
+    font-size: 25rpx;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999999;
+    height: 80rpx;
+    padding: 10rpx;
+}
+
+.other_operation {
+    display: flex;
+    flex-direction: row;
+}
+
+.zhuye {
+    margin-right: 50rpx;
+}
+
+.share {
+    margin-left: 50rpx;
+}
+
+.phone {
+    font-weight: 800;
+    font-size: 32rpx;
+    color: coral;
+}

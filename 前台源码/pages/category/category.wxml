@@ -1,0 +1,85 @@
+<view class="htmleaf-container" style="background:white;display:{{isLoading?'none':'block'}};height:100%;">
+
+  <view class="spinner-box" style="margin:0 auto;">
+    <view class="pulse-container" style="margin-top:500rpx;">
+      <view class="pulse-bubble pulse-bubble-1"></view>
+      <view class="pulse-bubble pulse-bubble-2"></view>
+      <view class="pulse-bubble pulse-bubble-3"></view>
+    </view>
+  </view>
+
+</view>
+
+<view style="display:{{isLoading?'block':'none'}}">
+
+
+
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+  <view class='container' style='margin-top: {{height*2+20}}px'>
+
+
+    <view class="main">
+
+      <block wx:for="{{user_message}}" wx:key="{{index}}">
+        <view class="back" bindtap="to_message_detail" id="{{item.messageId}}">
+          <view class="main_item">
+            <view class="user_message">
+              <view class="user_image">
+                <image src="{{item.userIdAnonymity==0?item.mangoUser.userAvatar:'../../images/other/hidden.jpg'}}" mode="widthFix" />
+              </view>
+              <view class="user_detail">
+                <view class="user_name">
+                  <text>{{item.userIdAnonymity==0?item.mangoUser.userNickname:"匿名用户"}}</text>
+                </view>
+                <view class="user_flag">
+                  <view class="flag_category">{{allCategoryMessage[item.categoryId-1].categoryName}}</view>
+                  <view class="flag_sex">{{item.mangoUser.userGender==1?"小哥哥":"小姐姐"}}</view>
+                  <view class="flag_major">{{item.userMajor}}</view>
+                  <view class="flag_age">{{item.userLevel}}级</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="main_middle">
+            <view class="main_middle_intro">
+              <text>{{item.messageDetail}}</text>
+            </view>
+            <view class="main_middle_image {{item.messageImages.length==1?'change_one':item.messageImages.length==2?'change_second':''}}">
+              <block wx:for="{{item.messageImages}}" wx:key="{{index}}">
+                <image src="{{imageUrl}}{{item.imageUrl}}" mode="aspectFill" />
+              </block>
+            </view>
+          </view>
+          <view class="main_bottom">
+            <view class="main_bottom_operation">
+              <view class="main_bottom_operation_left">
+                <view>
+                  <text class="iconfont icon-zhuanfa" style="margin-left:20rpx;color:#999;font-size:25rpx;">{{item.messageShare}}</text>
+                  <text class="iconfont icon-iconfontpinglun" style="margin-left:50rpx;color:#999;font-size:25rpx;">{{item.messageComment}}</text>
+                </view>
+              </view>
+              <view class="main_bottom_operation_right">
+                <text class="iconfont icon-dianzan" style="margin-right:20rpx;color:#999;font-size:25rpx;">{{item.messageWatch}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <view class="end" style="text-align:center;color:#999;font-size:25rpx;margin:10rpx;margin-top:20rpx;display:{{isLastPage?'':'none'}}">
+      ————————— End —————————
+    </view>
+    <view class="end" style="text-align:center;color:#999;font-size:25rpx;margin:10rpx;margin-top:20rpx;display:{{user_message.length==0?'':'none'}}">
+      ————————— End —————————
+    </view>
+  </view>
+
+  <view class="other" style="display:{{floorstatus}}">
+    <view class="return_top" bindtap='goTop'>
+      <image src="../../images/other/top.png" class="goTop" style="font-size:100rpx;color:#3cc;" />
+    </view>
+  </view>
+
+</view>

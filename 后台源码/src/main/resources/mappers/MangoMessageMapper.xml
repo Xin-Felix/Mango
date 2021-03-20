@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.huangxin.mango.mapper.MangoMessageMapper">
+    <resultMap id="BaseResultMap" type="work.huangxin.mango.model.MangoMessage">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="message_id" jdbcType="INTEGER" property="messageId"/>
+        <result column="user_id_anonymity" jdbcType="INTEGER" property="userIdAnonymity"/>
+        <result column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="category_id" jdbcType="INTEGER" property="categoryId"/>
+        <result column="user_phone" jdbcType="VARCHAR" property="userPhone"/>
+        <result column="user_major" jdbcType="VARCHAR" property="userMajor"/>
+        <result column="user_level" jdbcType="VARCHAR" property="userLevel"/>
+        <result column="message_detail" jdbcType="VARCHAR" property="messageDetail"/>
+        <result column="message_share" jdbcType="INTEGER" property="messageShare"/>
+        <result column="message_comment" jdbcType="INTEGER" property="messageComment"/>
+        <result column="message_watch" jdbcType="INTEGER" property="messageWatch"/>
+        <result column="message_creat_time" jdbcType="TIMESTAMP" property="messageCreatTime"/>
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+        message_id, user_id_anonymity, user_id, category_id, user_phone, user_major, user_level,
+        message_detail, message_share, message_comment, message_watch, message_creat_time
+    </sql>
+    <select id="getLostMessage" resultMap="BaseResultMap">
+        SELECT message_id, user_id_anonymity, user_id, category_id, user_phone, user_major, user_level,
+        message_detail, message_share, message_comment, message_watch, message_creat_time FROM mango_message WHERE category_id=1 ORDER BY mango_message.message_creat_time desc limit 1
+    </select>
+    <insert id="insertMessageDetail">
+        <selectKey resultType="Integer" keyProperty="messageId">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO mango_message (mango_message.user_id_anonymity,mango_message.user_id,mango_message.category_id,
+        mango_message.user_phone, mango_message.user_major, mango_message.user_level,mango_message.message_detail)
+        VALUES
+        (#{userIdAnonymity},#{userId},#{categoryId},#{userPhone},#{userMajor},#{userLevel},#{messageDetail})
+    </insert>
+
+    <select id="getAllMessage" resultMap="BaseResultMap">
+        SELECT message_id, user_id_anonymity, user_id, category_id, user_phone, user_major, user_level,
+        message_detail, message_share, message_comment, message_watch, message_creat_time FROM mango_message ORDER BY mango_message.message_creat_time desc
+    </select>
+
+    <select id="getMessageByCategoryId" resultMap="BaseResultMap">
+        SELECT message_id, user_id_anonymity, user_id, category_id, user_phone, user_major, user_level,
+        message_detail, message_share, message_comment, message_watch, message_creat_time FROM mango_message WHERE category_id=#{id} ORDER BY mango_message.message_creat_time desc
+    </select>
+    <select id="getMessageByCategoryAndKeyword" resultMap="BaseResultMap">
+
+        SELECT message_id, user_id_anonymity, user_id, category_id, user_phone, user_major, user_level,
+        message_detail, message_share, message_comment, message_watch, message_creat_time FROM mango_message WHERE mango_message.category_id=#{id}  AND  ( mango_message.message_detail  LIKE BINARY CONCAT('%',('${keyword}'),'%') ) order by mango_message.message_creat_time DESC
+
+    </select>
+    <select id="getMessageDetailByUserId" resultMap="BaseResultMap">
+             SELECT message_id, user_id_anonymity, user_id, category_id, user_phone, user_major, user_level,
+        message_detail, message_share, message_comment, message_watch, message_creat_time FROM mango_message WHERE user_id=#{id} ORDER BY mango_message.message_creat_time desc
+    </select>
+    <select id="getMessageByKeyword" resultMap="BaseResultMap">
+
+        SELECT message_id, user_id_anonymity, user_id, category_id, user_phone, user_major, user_level,
+        message_detail, message_share, message_comment, message_watch, message_creat_time FROM mango_message WHERE ( mango_message.message_detail  LIKE BINARY CONCAT('%',('${keyword}'),'%') ) order by mango_message.message_creat_time DESC
+
+    </select>
+
+
+    <delete id="deleteCommentAndReply" >
+
+delete  mango_comment,mango_comment_reply  from mango_comment left join mango_comment_reply on mango_comment.comment_id=mango_comment_reply.comment_id where mango_comment.message_id=#{id}
+</delete>
+</mapper>

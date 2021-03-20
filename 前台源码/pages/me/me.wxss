@@ -1,0 +1,190 @@
+page {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.eot?t=1565584337243');
+  /* IE9 */
+  src: url('iconfont.eot?t=1565584337243#iefix') format('embedded-opentype'),
+         /* IE6-IE8 */ url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+         url('iconfont.woff?t=1565584337243') format('woff'),
+         url('iconfont.ttf?t=1565584337243') format('truetype'),
+         /* chrome,
+         firefox,
+         opera,
+         Safari,
+         Android,
+         iOS 4.2+ */ url('iconfont.svg?t=1565584337243#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 33rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button::after {
+  outline: none;
+  border: none;
+}
+
+button {
+  display: inline;
+  line-height: 50rpx;
+  background-color: white;
+  padding: 0;
+  margin-left: 10rpx;
+  font-size: 33rpx;
+  font-weight: 200;
+}
+
+.icon-about:before {
+  content: "\e614";
+}
+
+.icon-xiaoxi:before {
+  content: "\e7f3";
+}
+
+.icon-yueding:before {
+  content: "\e6d1";
+}
+
+.icon-shoucang:before {
+  content: "\e633";
+}
+
+.icon-wocanyude:before {
+  content: "\e7d5";
+}
+
+.icon-lianxi:before {
+  content: "\e649";
+}
+
+.icon-follow:before {
+  content: "\e703";
+}
+
+.icon-wodefabu:before {
+  content: "\e668";
+}
+
+.icon-kefu:before {
+  content: "\e618";
+}
+
+.top {
+  background-color: white;
+}
+
+.user_message {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20rpx;
+  padding-top: 50rpx;
+}
+
+.user_image image {
+  width: 130rpx;
+  border-radius: 50%;
+}
+
+.user_detail {
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10rpx;
+}
+
+.user_nickname {
+  font-size: 35rpx;
+  font-weight: 800;
+  color: cadetblue;
+}
+
+.user_time {
+  font-weight: 200;
+  color: #999;
+  font-size: 25rpx;
+}
+
+.me_operation {
+  margin-top: 20rpx;
+}
+
+.me_operation view {
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: white;
+  margin-top: 2rpx;
+  padding: 20rpx;
+  font-size: 33rpx;
+  font-weight: 200;
+  letter-spacing: 10rpx;
+}
+
+.zan-dialog__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.submit {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  height: 80rpx;
+  font-weight: 800;
+  line-height: 80rpx;
+}
+
+.zan-dialog__container {
+  position: fixed;
+  bottom: 500rpx;
+  width: 80%;
+  margin-left: 10%;
+  height: 250rpx;
+  background: #f8f8f8;
+  transform: translateY(300%);
+  transition: all 0.4s ease;
+  z-index: 12;
+  border-radius: 20rpx;
+}
+
+.tips {
+  margin: 10rpx;
+  text-align: center;
+  font-weight: 800;
+  color: #999;
+}
+
+.zan-dialog--show .zan-dialog__container {
+  transform: translateY(0);
+}
+
+.zan-dialog--show .zan-dialog__mask {
+  display: block;
+}
+ .pulse-bubble-3 {
+  animation: pulse 0.4s ease 0.4s infinite alternate;
+}
+
+.sun {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ffab91;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.huangxin.mango.mapper.MangoUserMapper">
+    <resultMap id="BaseResultMap" type="work.huangxin.mango.model.MangoUser">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="user_openid" jdbcType="VARCHAR" property="userOpenid"/>
+        <result column="user_gender" jdbcType="INTEGER" property="userGender"/>
+        <result column="user_avatar" jdbcType="VARCHAR" property="userAvatar"/>
+        <result column="user_nickname" jdbcType="VARCHAR" property="userNickname"/>
+        <result column="user_is_admin" jdbcType="INTEGER" property="userIsAdmin"/>
+        <result column="user_allow" jdbcType="INTEGER" property="userAllow"/>
+        <result column="user_creat_time" jdbcType="TIMESTAMP" property="userCreatTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        user_id, user_openid, user_gender, user_avatar, user_nickname, user_is_admin, user_allow,
+        user_creat_time
+    </sql>
+    <insert id="insertUserMessage">
+        <selectKey resultType="Integer" keyProperty="userId">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO mango_user (user_openid, user_gender, user_avatar, user_nickname) VALUES
+        (#{userOpenid},#{userGender},#{userAvatar},#{userNickname})
+    </insert>
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.huangxin.mango.mapper.MangoMessageImagesMapper">
+  <resultMap id="BaseResultMap" type="work.huangxin.mango.model.MangoMessageImages">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="image_id" jdbcType="INTEGER" property="imageId" />
+    <result column="message_id" jdbcType="INTEGER" property="messageId" />
+    <result column="image_url" jdbcType="VARCHAR" property="imageUrl" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    image_id, message_id, image_url
+  </sql>
+</mapper>

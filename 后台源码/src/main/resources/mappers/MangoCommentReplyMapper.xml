@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.huangxin.mango.mapper.MangoCommentReplyMapper">
+  <resultMap id="BaseResultMap" type="work.huangxin.mango.model.MangoCommentReply">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="comment_reply_id" jdbcType="INTEGER" property="commentReplyId" />
+    <result column="comment_id" jdbcType="INTEGER" property="commentId" />
+    <result column="comment_user_id" jdbcType="INTEGER" property="commentUserId" />
+    <result column="replay_user_id" jdbcType="INTEGER" property="replayUserId" />
+    <result column="replay_user_name" jdbcType="VARCHAR" property="replayUserName" />
+    <result column="receive_user_id" jdbcType="INTEGER" property="receiveUserId" />
+    <result column="receive_user_name" jdbcType="VARCHAR" property="receiveUserName" />
+    <result column="reply_detail" jdbcType="VARCHAR" property="replyDetail" />
+    <result column="reply_time" jdbcType="TIMESTAMP" property="replyTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    comment_reply_id, comment_id, comment_user_id, replay_user_id, replay_user_name, 
+    receive_user_id, receive_user_name, reply_detail, reply_time
+  </sql>
+</mapper>

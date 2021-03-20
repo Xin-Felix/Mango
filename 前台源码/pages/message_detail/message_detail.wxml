@@ -1,0 +1,171 @@
+<view class="htmleaf-container" style="background:white;display:{{isLoading?'none':'block'}};height:100%;">
+
+  <view class="spinner-box" style="margin:0 auto;">
+    <view class="pulse-container" style="margin-top:500rpx;">
+      <view class="pulse-bubble pulse-bubble-1"></view>
+      <view class="pulse-bubble pulse-bubble-2"></view>
+      <view class="pulse-bubble pulse-bubble-3"></view>
+    </view>
+  </view>
+
+</view>
+
+<view style="display:{{isLoading?'block':'none'}}">
+
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <view class='home-page' style='margin-top: {{height*2+20}}px'>
+    <view class="back">
+      <view class="main_item">
+        <view class="user_message">
+          <view class="user_image" bindtap="admin">
+            <image src="{{messageDetail.userIdAnonymity==0?messageDetail.mangoUser.userAvatar:'../../images/other/hidden.jpg'}}" mode="widthFix" />
+          </view>
+          <view class="user_detail">
+            <view class="user_name">
+              <text>{{messageDetail.userIdAnonymity==0?messageDetail.mangoUser.userNickname:"匿名用户"}}</text>
+              <view>
+                <button bindtap="delete_message" style="font-size:28rpx;color:red;display:{{userIsAdmin==2?'block':messageDetail.userId==userId?'block':'none'}}">删除该文章</button>
+              </view>
+            </view>
+            <view class="user_flag">
+              <view>{{messageDetail.messageCreatTime}} 发布 </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="main_middle">
+        <view class="main_middle_intro">
+          <text selectable>{{messageDetail.messageDetail}}</text>
+        </view>
+        <view class="main_middle_image">
+          <block wx:for="{{messageDetail.messageImages}}" wx:key="{{index}}">
+            <image bindtap="look_image" id="{{imageUrl}}{{item.imageUrl}}" src="{{imageUrl}}{{item.imageUrl}}" mode="widthFix" />
+          </block>
+        </view>
+      </view>
+      <view class="main_bottom">
+        <view class="main_bottom_operation">
+          <view class="main_bottom_operation_left">
+            <view>
+              <text class="iconfont icon-zhuanfa" style="margin-left:20rpx;color:#999;font-size:25rpx;">{{messageDetail.messageShare}}</text>
+            </view>
+          </view>
+          <view class="main_bottom_operation_right">
+            <text class="iconfont icon-dianzan" style="margin-right:20rpx;color:#999;font-size:25rpx;">{{messageDetail.messageWatch}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="divide"></view>
+      <view class="liuyan">
+
+        <block wx:for="{{messageDetail.comments}}" wx:key="{{index}}">
+          <view class="liuyan_item">
+            <view class="user_message">
+              <view class="user_image">
+                <image src="{{item.mangoUser.userAvatar}}" mode="widthFix" />
+              </view>
+              <view class="user_detail">
+                <view class="user_name">
+                  <text>{{item.mangoUser.userNickname}}</text>
+                  <view>
+                    <button bindtap="delete_comment" id="{{item.commentId}}" style="font-size:28rpx;color:red;display:{{userIsAdmin==2?'block':item.userId==userId?'block':'none'}}">删除</button>
+                  </view>
+                </view>
+                <view class="user_flag">
+                  <view>{{item.commentCreatTime}}</view>
+                </view>
+              </view>
+            </view>
+            <view class="liuyan_intro" data-name="{{item.mangoUser.userNickname}}" data-commentId="{{item.commentId}}" id="{{item.userId}}" bindtap="toggleDialog2">
+              {{item.commentDetail}}
+            </view>
+            <view class="have_message">
+              <block wx:for="{{item.commentReplies}}" wx:for-item="replay" wx:key="{{index}}">
+                <view class="have_message_item">
+
+                  <view class="test">
+                    <view class="have_message_user">{{replay.replayUserName}}
+                      <text decode="{{true}}" style="color:#999;display:{{(item.userId==replay.receiveUserId)?'none':'inline'}}">&nbsp;回复&nbsp;</text>{{(item.userId==replay.receiveUserId)?"":(replay.receiveUserName)}}
+                    </view>
+                    <view style="color:red">
+                      <button bindtap="delete_comment_reply" id="{{replay.commentReplyId}}" style="font-size:28rpx;color:red;display:{{userIsAdmin==2?'block':replay.replayUserId==userId?'block':'none'}}">删除</button>
+                    </view>
+                  </view>
+                  <view class="have_message_intro" style="word-wrap:break-word;" bindtap="toggleDialog3" data-commentId="{{item.commentId}}" data-name="{{replay.replayUserName}}" id="{{replay.replayUserId}}">{{replay.replyDetail}}</view>
+                </view>
+              </block>
+            </view>
+          </view>
+          <view class="divide" style="margin-left: 120rpx;"></view>
+        </block>
+
+      </view>
+
+
+    </view>
+  </view>
+
+
+
+  <view class="end" style="text-align:center;color:#999;font-size:25rpx;margin:10rpx;margin-top:20rpx;height:150rpx;">
+    ————————— End —————————
+  </view>
+
+  <view class="bottom">
+    <view class="bottom_main">
+      <view class='tit_seabox'>
+        <view class="tit_seabox_bar" style="width:60%;">
+          <input type="text" placeholder='留下你的脚步吧~' bindtap="toggleDialog1" disabled />
+        </view>
+        <view class="other_operation">
+          <button class="iconfont icon-shoucang" style="font-size:60rpx;margin-left:20rpx;margin-right:20rpx;color:{{isCollection?'orange':'black'}}" bindtap="collection"></button>
+          <button class="iconfont icon-zhuanfa" open-type="share" style="font-size:60rpx;margin-left:20rpx;" bindtap="share_message"></button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="zan-dialog {{ showDialog1 ? 'zan-dialog--show' : '' }}">
+    <view class="zan-dialog__mask" bindtap="toggleDialog1" />
+    <view class="zan-dialog__container">
+      <view>
+        <textarea bindinput="comment_input" maxlength="150" value="{{comment_input}}" placeholder="留言给-{{messageDetail.userIdAnonymity==0?messageDetail.mangoUser.userNickname:'匿名用户'}}  (150字)" placeholder-style="color:rgba(0,0,0,{{ showDialog1 ? '0.5' : '0' }})"></textarea>
+        <button type="primary" class="submit" bindtap="comment">留言</button>
+      </view>
+    </view>
+  </view>
+  <view class="zan-dialog {{ showDialog2 ? 'zan-dialog--show' : '' }}">
+    <view class="zan-dialog__mask" bindtap="toggleDialog2" />
+    <view class="zan-dialog__container">
+      <view>
+        <textarea maxlength="150" bindinput="comment_reply" value="{{comment_reply}}" placeholder="回复-{{liuyanName}}  (150字)" placeholder-style="color:rgba(0,0,0,{{ showDialog2 ? '0.5' : '0' }})"></textarea>
+        <button type="primary" class="submit" bindtap="comment_reply_btn">回复</button>
+      </view>
+    </view>
+  </view>
+  <view class="zan-dialog {{ showDialog3 ? 'zan-dialog--show' : '' }}">
+    <view class="zan-dialog__mask" bindtap="toggleDialog3" />
+    <view class="zan-dialog__container">
+      <view>
+        <textarea maxlength="150" bindinput="comment_reply" placeholder="回复-{{pinglunName}}  (150字)" value="{{comment_reply}}" placeholder-style="color:rgba(0,0,0,{{ showDialog3 ? '0.5' : '0' }})"></textarea>
+        <button type="primary" class="submit" bindtap="test">回复</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="zan-dialog {{ showDialog4 ? 'zan-dialog--show' : '' }}">
+    <view class="zan-dialog__mask" bindtap="toggleDialog4" />
+    <view class="zan-dialog__container">
+      <view>
+        <textarea maxlength="150" bindinput="comment_reply" placeholder="回复-{{messageDetail.mangoUser.userNickname}} (20字以内)" value="{{comment_reply}}" placeholder-style="color:rgba(0,0,0,{{ showDialog4 ? '0.5' : '0' }})"></textarea>
+        <button type="primary" class="submit" bindtap="admin_reply">管理员回复</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="other" style="display:{{floorstatus}}">
+    <view class="return_top" bindtap='goTop'>
+      <image src="../../images/other/top.png" class="goTop" style="font-size:100rpx;color:#3cc;" />
+    </view>
+  </view>
+</view>

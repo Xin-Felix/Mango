@@ -1,0 +1,39 @@
+<view class="htmleaf-container" style="background:white;display:{{isLoading?'none':'block'}};height:100%;">
+
+  <view class="spinner-box" style="margin:0 auto;">
+    <view class="pulse-container" style="margin-top:500rpx;">
+      <view class="pulse-bubble pulse-bubble-1"></view>
+      <view class="pulse-bubble pulse-bubble-2"></view>
+      <view class="pulse-bubble pulse-bubble-3"></view>
+    </view>
+  </view>
+
+</view>
+
+<view style="display:{{isLoading?'block':'none'}}">
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <view class='container' style='margin-top: {{height*2+20}}px'>
+    <block wx:for="{{shopMessage}}" wx:key="{{index}}">
+      <view class="goods_center">
+        <view class="goods_left">
+          <image src="{{item.shopAvatar}}" bindtap='browseImage' mode="widthFix" />
+        </view>
+        <view class="goods_rigth">
+          <view class="goods_title">
+            <text class="title">{{item.shopName}}</text>
+          </view>
+          <view class="goods_intro">
+            <text>{{item.shopIntro}}</text>
+          </view>
+          <view class="goods_bottom">
+            <view class="operation">
+              <button bindtap='call' id='{{item.shopPhone}}'>立即联系</button>
+              <button id="{{item.shopId}}" bindtap="to_look">查看详情</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view style="display:{{shopMessage.length==0?'':'none'}};text-align:center;font-size:30rpx;color:#999">空空如也，快来联系我们吧~</view>
+  </view>
+</view>

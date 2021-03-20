@@ -1,0 +1,42 @@
+<view class="htmleaf-container" style="background:white;display:{{isLoading?'none':'block'}};height:100%;">
+
+  <view class="spinner-box" style="margin:0 auto;">
+    <view class="pulse-container" style="margin-top:500rpx;">
+      <view class="pulse-bubble pulse-bubble-1"></view>
+      <view class="pulse-bubble pulse-bubble-2"></view>
+      <view class="pulse-bubble pulse-bubble-3"></view>
+    </view>
+  </view>
+
+</view>
+
+<view style="display:{{isLoading?'block':'none'}}">
+
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <view class='container' style='margin-top: {{height*2+20}}px'>
+    <block wx:for="{{me_message}}" wx:key="{{index}}">
+      <view class="message_item" bindtap="to_message_detail" id="{{item.messageId}}">
+        <view class="back">
+          <view class="title">
+            <view class="main_title">{{messageType[item.newMessageType-1]}}</view>
+            <view class="main_time">{{item.newMessageTime}}</view>
+          </view>
+          <view class="message_detail">{{item.newMessageDetail}}</view>
+          <view class="message_operation" bindlongtap="to_message_detail" id="{{item.messageId}}">查看详情</view>
+        </view>
+      </view>
+    </block>
+    <view class="end" style="text-align:center;color:#999;font-size:25rpx;margin:10rpx;margin-top:20rpx;display:{{isLastPage?'':'none'}}">
+      ————————— End —————————
+    </view>
+    <view class="end" style="text-align:center;color:#999;font-size:25rpx;margin:10rpx;margin-top:20rpx;display:{{me_message.length==0?'':'none'}}">
+      ————————— End —————————
+    </view>
+  </view>
+
+  <view class="other" style="display:{{floorstatus}}">
+    <view class="return_top" bindtap='goTop'>
+      <image src="../../images/other/top.png" class="goTop" style="font-size:100rpx;color:#3cc;" />
+    </view>
+  </view>
+</view>

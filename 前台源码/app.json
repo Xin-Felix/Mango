@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/category/category",
+    "pages/search/search",
+    "pages/message_detail/message_detail",
+    "pages/add/add",
+    "pages/agreement/agreement",
+    "pages/add_detail/add_detail",
+    "pages/shop/shop",
+    "pages/shop_detail/shop_detail",
+    "pages/me/me",
+    "pages/me_fabu/me_fabu",
+    "pages/me_canyu/me_canyu",
+    "pages/me_shoucang/me_shoucang",
+    "pages/me_xiaoxi/me_xiaoxi",
+    "pages/me_about/me_about"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于天气预报,请给予权限噢"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/images/tabBar/zhuye.png",
+        "selectedIconPath": "/images/tabBar/zhuye_active.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "text": "添加",
+        "iconPath": "/images/tabBar/tianjia.png",
+        "selectedIconPath": "/images/tabBar/tianjia_active.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商店",
+        "iconPath": "/images/tabBar/shangpin.png",
+        "selectedIconPath": "/images/tabBar/shangpin_active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/images/tabBar/wode.png",
+        "selectedIconPath": "/images/tabBar/wode_active.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

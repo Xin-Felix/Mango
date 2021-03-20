@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.huangxin.mango.mapper.MangoShopBusinessMapper">
+  <resultMap id="BaseResultMap" type="work.huangxin.mango.model.MangoShopBusiness">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="business_id" jdbcType="INTEGER" property="businessId" />
+    <result column="shop_id" jdbcType="INTEGER" property="shopId" />
+    <result column="shop_goods_image" jdbcType="VARCHAR" property="shopGoodsImage" />
+    <result column="shop_goods_title" jdbcType="VARCHAR" property="shopGoodsTitle" />
+    <result column="shop_goods_price" jdbcType="DECIMAL" property="shopGoodsPrice" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    business_id, shop_id, shop_goods_image, shop_goods_title, shop_goods_price
+  </sql>
+</mapper>

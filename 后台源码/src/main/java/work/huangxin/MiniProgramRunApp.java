@@ -1,4 +1,4 @@
-package work.huangxin;
+package work.huangxin.mango;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,24 +12,24 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableTransactionManagement
 public class MiniProgramRunApp extends SpringBootServletInitializer {
 
-//    public static void main(String args[]) {
-//        SpringApplication.run(MiniProgramRunApp.class, args);
-//    }
-
-
-    /**
-     * 以下为Tomcat启动
-     * @param application
-     * @return
-     */
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(MiniProgramRunApp.class);
-    }
-
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         SpringApplication.run(MiniProgramRunApp.class, args);
     }
+
+
+//    /**
+//     * 以下为Tomcat启动
+//     * @param application
+//     * @return
+//     */
+//    @Override
+//    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+//        return application.sources(MiniProgramRunApp.class);
+//    }
+//
+//    public static void main(String[] args) {
+//        SpringApplication.run(MiniProgramRunApp.class, args);
+//    }
 
 }
 

@@ -18,7 +18,6 @@ mybatis:
     mappers: work.huangxin.mango.basemapper
     identity: MYSQL
 
-# 日志,生产环境注释即可
 logging:
   level:
     work.huangxin.mango.mapper: debug

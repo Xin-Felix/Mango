@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.huangxin.mango.mapper.MangoNoticeMapper">
+  <resultMap id="BaseResultMap" type="work.huangxin.mango.model.MangoNotice">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="notice_id" jdbcType="INTEGER" property="noticeId" />
+    <result column="notice_detail" jdbcType="VARCHAR" property="noticeDetail" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    notice_id, notice_detail
+  </sql>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.huangxin.mango.mapper.MangoCollectMapper">
+  <resultMap id="BaseResultMap" type="work.huangxin.mango.model.MangoCollect">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="collect_id" jdbcType="INTEGER" property="collectId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="message_id" jdbcType="INTEGER" property="messageId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    collect_id, user_id, message_id
+  </sql>
+
+  <select id="getAllCollectionMessageByUserId" resultMap="BaseResultMap">
+     SELECT  collect_id, user_id, message_id FROM mango_collect WHERE user_id=#{id} order by collect_id desc
+
+    </select>
+</mapper>

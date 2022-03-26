@@ -173,30 +173,30 @@ Page({
             var tempFilePaths = img_url[i];
             var nowTime = util.formatTime(new Date());
             //支持多图上传
-            for (var j = 0; j < img_url.length; j++) {
-                //显示消息提示框
-                wx.showLoading({
-                    title: '上传中' + (j + 1) + '/' + img_url.length,
-                    mask: true
-                })
 
-                //上传图片
-                //你的域名下的/images/文件下的/当前年月日文件下的/图片.png
-                //图片路径可自行修改
+            //显示消息提示框
+            wx.showLoading({
+                title: '上传中' + (i + 1) + '/' + img_url.length,
+                mask: true
+            })
 
-                var path = 'images/' + nowTime + '/' + new Date().getTime() + Math.floor(Math.random() * 150) + '.png';
-                uploadImage(img_url[i], path,
-                    function(result) {
-                        console.log("======上传成功图片地址为：", result);
-                        wx.hideLoading();
-                    },
-                    function(result) {
-                        console.log("======上传失败======", result);
-                        wx.hideLoading()
-                    }
-                )
-                images_url.push(path);
-            }
+            //上传图片
+            //你的域名下的/images/文件下的/当前年月日文件下的/图片.png
+            //图片路径可自行修改
+
+            var path = 'images/' + nowTime + '/' + new Date().getTime() + Math.floor(Math.random() * 150) + '.png';
+            uploadImage(img_url[i], path,
+                function(result) {
+                    console.log("======上传成功图片地址为：", result);
+                    wx.hideLoading();
+                },
+                function(result) {
+                    console.log("======上传失败======", result);
+                    wx.hideLoading()
+                }
+            )
+            images_url.push(path);
+
 
             that.setData({
                 result_image_url: images_url
@@ -242,7 +242,7 @@ Page({
             })
             return;
         }
-        if (new Number(that.data.input_level) < 14 || new Number(that.data.input_level) > 19) {
+        if (new Number(that.data.input_level) < 14) {
             wx.showModal({
                 title: '提示',
                 content: '年级不对噢~',
